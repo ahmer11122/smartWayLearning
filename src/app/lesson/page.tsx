@@ -1,5 +1,5 @@
 import { getLesson } from "@/lib/content";
-import { BilingualLayout } from "@/components/layout/BilingualLayout";
+
 import { QuestionCard } from "@/components/content/QuestionCard";
 
 /**
@@ -135,18 +135,18 @@ export default async function LessonPage() {
     return (
         <main className="min-h-screen bg-bg-APP">
             {/* Header - clean, minimal */}
-            <header className="border-b border-border bg-bg-SURFACE sticky top-0 z-20 lg:static">
+            <header className="border-b border-border bg-bg-SURFACE lg:static">
                 <div className="px-6 py-8 lg:px-12 lg:py-12">
                     <p className="text-sm lg:text-base text-brand-primary font-medium mb-2 lg:mb-3">
                         Smart Way Learning Institute
                     </p>
-                    <div className="flex flex-col lg:flex-row lg:items-baseline lg:justify-between lg:gap-8">
+                    <div className="flex flex-col gap-4 lg:gap-6">
                         <h1 className="text-3xl lg:text-5xl font-bold text-text-PRIMARY">
                             {lesson.title}
                         </h1>
                         {lesson.translation?.urduTitle && (
                             <p
-                                className="mt-2 lg:mt-0 font-urdu text-2xl lg:text-4xl text-text-SECONDARY leading-[2]"
+                                className="font-urdu text-2xl lg:text-4xl text-text-SECONDARY leading-[2]"
                                 dir="rtl"
                             >
                                 {lesson.translation.urduTitle}
@@ -156,48 +156,55 @@ export default async function LessonPage() {
                 </div>
             </header>
 
-            {/* Bilingual Content - Full width on desktop */}
-            <div className="lg:px-8">
-                <BilingualLayout
-                    english={
-                        <div className="space-y-4">
-                            {sections.map((section) => (
-                                <QuestionCard
-                                    key={section.id}
-                                    id={section.id}
-                                    question={section.titleEn}
+            {/* Unified Content - Full Width */}
+            <div className="w-full px-4 py-8 lg:px-12 lg:py-16 space-y-6">
+                {sections.map((section) => (
+                    <QuestionCard
+                        key={section.id}
+                        id={section.id}
+                        question={
+                            <div className="flex flex-col gap-3 py-1">
+                                <span className="text-xl lg:text-2xl font-bold text-text-PRIMARY tracking-tight">
+                                    {section.titleEn}
+                                </span>
+                                <span
+                                    className="text-2xl lg:text-3xl font-urdu text-brand-primary leading-[1.6] text-right"
+                                    dir="rtl"
                                 >
-                                    <ul className="space-y-3">
-                                        {section.contentEn.map((item, i) => (
-                                            <li key={i} className="text-text-SECONDARY text-base lg:text-lg">
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </QuestionCard>
-                            ))}
+                                    {section.titleUr}
+                                </span>
+                            </div>
+                        }
+                    >
+                        <div className="space-y-8 pt-2">
+                            {/* Interleaved Content Pairs */}
+                            <ul className="flex flex-col">
+                                {section.contentEn.map((itemEn, i) => {
+                                    const itemUr = section.contentUr[i];
+                                    return (
+                                        <li
+                                            key={i}
+                                            className="flex flex-col gap-4 group py-6 border-b border-border last:border-0 first:pt-2"
+                                        >
+                                            {/* English Line */}
+                                            <div className="text-text-PRIMARY text-lg lg:text-xl font-medium leading-relaxed pl-3 border-l-2 border-transparent group-hover:border-brand-primary/30 transition-colors">
+                                                {itemEn}
+                                            </div>
+
+                                            {/* Urdu Line */}
+                                            <div
+                                                className="text-text-SECONDARY text-xl lg:text-3xl leading-[2] font-urdu text-right pr-2 mt-1"
+                                                dir="rtl"
+                                            >
+                                                {itemUr}
+                                            </div>
+                                        </li>
+                                    );
+                                })}
+                            </ul>
                         </div>
-                    }
-                    urdu={
-                        <div className="space-y-4">
-                            {sections.map((section) => (
-                                <QuestionCard
-                                    key={`${section.id}-ur`}
-                                    id={`${section.id}-ur`}
-                                    question={section.titleUr}
-                                >
-                                    <ul className="space-y-3">
-                                        {section.contentUr.map((item, i) => (
-                                            <li key={i} className="text-text-SECONDARY text-lg lg:text-xl leading-[2.2]">
-                                                {item}
-                                            </li>
-                                        ))}
-                                    </ul>
-                                </QuestionCard>
-                            ))}
-                        </div>
-                    }
-                />
+                    </QuestionCard>
+                ))}
             </div>
         </main>
     );

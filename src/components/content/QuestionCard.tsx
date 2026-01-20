@@ -9,7 +9,7 @@ import { SPRING_EXPAND, STAGGER_CONTAINER, STAGGER_ITEM, BUTTON_TAP } from "@/li
 
 interface QuestionCardProps {
     id: string;
-    question: string;
+    question: ReactNode;
     children: ReactNode;
     /** Default expanded state */
     defaultOpen?: boolean;
@@ -57,7 +57,7 @@ export function QuestionCard({ id, question, children, defaultOpen = false }: Qu
                     "cursor-pointer"
                 )}
             >
-                <span>{question}</span>
+                <div className="w-full text-left">{question}</div>
                 <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={transition}
