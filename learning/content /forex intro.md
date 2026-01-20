@@ -1,0 +1,48 @@
+**Smart Way Learning INSTITUTE**
+
+**SAFE SECURE PERFECT**
+
+## Physical Market
+1. Market (Mandi)
+2. Investment or Product
+3. Time
+4. Hard Struggle
+5. Experience
+6. Time Frame To Trade
+7. Risk Factor
+
+## Online Trade
+1. Platform (Software)
+2. Investment or Product
+3. Time (Choice)
+4. Soft Struggle
+5. Experience
+6. Time Frame To Trade (Choice)
+7. Risk Factor
+
+## Stock Market Trade
+1. Platform (National Exchange)
+2. Investment
+3. Time (Choice)
+4. Soft Struggle
+5. Experience
+6. Time Frame To Trade (Fix)
+7. Risk Factor
+
+## Digital Trade
+1. Platform (PMEX, Forex, Crypto Currency/Coin Market)
+2. Investment
+3. Time (Choice)
+4. Soft Struggle
+5. Experience
+6. Time Frame To Trade (No Limit)
+7. Risk Factor
+
+## Benefits Of Forex Market
+1. International Market
+2. Thousands of Pairs (Commodities, Indices, Currencies)
+3. No Customer Need (only Buy & Sell Button)
+4. No Time Limit
+5. Huge Profit & Loss Within a Minute
+
+--

@@ -1,26 +1,49 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  /* Deep Ocean Palette */
+  --color-bg-APP: #020617;
+  --color-bg-SURFACE: #0F172A;
+  --color-bg-ELEVATED: #1E293B;
+
+  --color-text-PRIMARY: #F8FAFC;
+  --color-text-SECONDARY: #94A3B8;
+  --color-text-TERTIARY: #475569;
+
+  --color-brand-cyan: #06b6d4;
+  --color-brand-indigo: #6366f1;
+  --color-brand-emerald: #10b981;
+
+  /* Fonts */
+  --font-sans: var(--font-sans);
+  --font-urdu: var(--font-urdu);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Base resets and scrollbar styling */
+@layer base {
+  body {
+    background-color: var(--color-bg-APP);
+    color: var(--color-text-PRIMARY);
+    font-family: var(--font-sans);
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-bg-APP);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-bg-ELEVATED);
+    border-radius: 9999px;
+    border: 1px solid var(--color-bg-APP);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-TERTIARY);
+  }
 }
