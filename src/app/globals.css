@@ -1,25 +1,51 @@
 @import "tailwindcss";
 
 @theme {
-  /* Deep Ocean Palette */
-  --color-bg-APP: #020617;
-  --color-bg-SURFACE: #0F172A;
-  --color-bg-ELEVATED: #1E293B;
+  /* Clean Education Palette - Calm Study Mode */
 
-  --color-text-PRIMARY: #F8FAFC;
-  --color-text-SECONDARY: #94A3B8;
-  --color-text-TERTIARY: #475569;
+  /* Backgrounds - Warm & Clean */
+  --color-bg-APP: #FAFAF9;
+  /* Stone 50 - main bg */
+  --color-bg-SURFACE: #FFFFFF;
+  /* Pure white - cards */
+  --color-bg-ELEVATED: #F5F5F4;
+  /* Stone 100 - hovers, tabs */
+  --color-bg-MUTED: #E7E5E4;
+  /* Stone 200 - subtle sections */
 
-  --color-brand-cyan: #06b6d4;
-  --color-brand-indigo: #6366f1;
-  --color-brand-emerald: #10b981;
+  /* Text - High Readability */
+  --color-text-PRIMARY: #1C1917;
+  /* Stone 900 - main text */
+  --color-text-SECONDARY: #57534E;
+  /* Stone 600 - secondary */
+  --color-text-TERTIARY: #A8A29E;
+  /* Stone 400 - muted/captions */
+
+  /* Accents - Calm & Professional */
+  --color-brand-primary: #0EA5E9;
+  /* Sky 500 - primary accent */
+  --color-brand-success: #22C55E;
+  /* Green 500 - completed */
+  --color-brand-urdu: #8B5CF6;
+  /* Violet 500 - Urdu mode */
+
+  /* Borders */
+  --color-border: #E7E5E4;
+  /* Stone 200 */
+  --color-border-light: #F5F5F4;
+  /* Stone 100 */
+
+  /* Legacy aliases for compatibility */
+  --color-brand-cyan: #0EA5E9;
+  --color-brand-indigo: #6366F1;
+  --color-brand-emerald: #22C55E;
 
   /* Fonts */
   --font-sans: var(--font-sans);
   --font-urdu: var(--font-urdu);
 }
 
-/* Base resets and scrollbar styling */
+/* Base resets and global styles */
 @layer base {
   body {
     background-color: var(--color-bg-APP);
@@ -27,7 +53,7 @@
     font-family: var(--font-sans);
   }
 
-  /* Custom Scrollbar */
+  /* Custom Scrollbar - Clean Style */
   ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -38,9 +64,9 @@
   }
 
   ::-webkit-scrollbar-thumb {
-    background: var(--color-bg-ELEVATED);
+    background: var(--color-bg-MUTED);
     border-radius: 9999px;
-    border: 1px solid var(--color-bg-APP);
+    border: 2px solid var(--color-bg-APP);
   }
 
   ::-webkit-scrollbar-thumb:hover {

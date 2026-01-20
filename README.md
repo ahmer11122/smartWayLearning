@@ -34,3 +34,11 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+
+
+
+
+
+Review this task file and act as my Senior Engineer. Strictly follow the 'Context & Rules' and 'TDD Strategy'. Start by implementing the first unchecked item in the 'Implementation Steps' section. If a test is required, write the failing test first. Stop after completing the first step so I can review.
+follow all my skills perfectly 

@@ -1,50 +1,58 @@
-# 📍 Task: Setup & Foundation (Design System)
+# 📍 Task: Content Architecture (MDX & Zod)
 > **Status**: ✅ DONE
-> **Source**: [prd.md#phase-1-setup--foundation-week-1](file:///home/ahmer/Desktop/smartWay/learning/prd.md#phase-1-setup--foundation-week-1)
-> **Next Task**: [02-content-architecture.md](file:///home/ahmer/Desktop/smartWay/learning/roadmap/02-content-architecture.md)
-> **Dependencies**: None
+> **Source**: [prd.md#phase-2-core-architecture-week-2](file:///home/ahmer/Desktop/smartWay/learning/prd.md#phase-2-core-architecture-week-2)
+> **Next Task**: [03-feature-implementation.md](file:///home/ahmer/Desktop/smartWay/learning/roadmap/03-feature-implementation.md)
+> **Dependencies**: [01-setup-and-foundation.md](file:///home/ahmer/Desktop/smartWay/learning/roadmap/01-setup-and-foundation.md)
 > **Context Anchors**:
-> - [prd.md](file:///home/ahmer/Desktop/smartWay/learning/prd.md)
-> - [.agent/skills/creative-frontend-design/SKILL.md](file:///home/ahmer/Desktop/smartWay/.agent/skills/creative-frontend-design/SKILL.md)
+> - [.agent/skills/robust-engineering-standards/SKILL.md](file:///home/ahmer/Desktop/smartWay/.agent/skills/robust-engineering-standards/SKILL.md)
+> - [.agent/skills/pre-test-writing-standards/SKILL.md](file:///home/ahmer/Desktop/smartWay/.agent/skills/pre-test-writing-standards/SKILL.md)
+> - [.agent/skills/test-driven-development/SKILL.md](file:///home/ahmer/Desktop/smartWay/.agent/skills/test-driven-development/SKILL.md)
 
 ## 🎯 Objective
-Initialize the Next.js project with the "Deep Ocean" design system, configuring strict Tailwind tokens, fluid typography, and the bilingual font stack (Gulzar + Plus Jakarta Sans).
+Build the "Content Engine" that safely reads, validates, and serves bilingual MDX content. This is the **database** of the application.
+for now just there is chapter 1 we add other later /home/ahmer/Desktop/smartWay/learning/content /forex intro.md
 
 ## 🧠 Context & Rules
-### Design System (The "Premium" Look)
-*   **Colors**: Implement the `bg-APP` (#020617) and `bg-SURFACE` (#0F172A) palette.
-*   **Typography**:
-    *   **English**: Plus Jakarta Sans (`var(--font-sans)`).
-    *   **Urdu**: Gulzar (`var(--font-urdu)`).
-    *   **Fluidity**: Use `clamp()` checks for all text sizes.
+### Data Integrity
+*   **Rule**: "Trust No Frontmatter".
+*   **Schema**: Zod schema must strictly validate:
+    *   `id` (UUID)
+    *   `title` (min 5 chars)
+    *   `translation` object (Urdu fields)
+*   **Failure Mode**: Build **MUST FAIL** if any MDX file is invalid.
 
-### Engineering Standards
-*   **Strict Mode**: Ensure `tsconfig` is set to strict.
-*   **Linting**: Zero tolerance for ESLint warnings.
+### Directory Structure
+*   `content/course-01/topic-01.mdx`
+*   `content/course-01/topic-02.mdx`
 
 ## 🧪 TDD Strategy
-*   [x] **Red**: Create a test component `DesignSystemCheck.spec.tsx`.
-    *   Verify `font-urdu` class applies the correct font-family.
-    *   Verify `bg-APP` resolves to `#020617`.
-    *   Verify `clamp` utilities are present.
-*   [x] **Green**: Configure `tailwind.config.ts` and `layout.tsx`.
-*   [x] **Refactor**: Abstract tokens into `src/lib/tokens.ts` if needed. (Handled in CSS variables).
+*   [x] **Red**: Create `tests/unit/content-engine.test.ts`.
+    *   **Test**: Parse a mock MDX file with missing `id` -> Expect Zod Error.
+    *   **Test**: Parse a valid file -> Expect typed `Lesson` object.
+    *   **Test**: Sort logic (by `order` field).
+*   [ ] **Green**: Implement `src/lib/content.ts` using `gray-matter` or `next-mdx-remote`.
+*   [ ] **Refactor**: Optimize FS reads with caching (if needed).
 
 ## 🏗️ Implementation Steps
-- [x] **Project Init**: Verify Next.js 14+ App Router setup.
-- [x] **Dependencies**: Install `lucide-react`, `framer-motion`, `clsx`, `tailwind-merge`.
-- [x] **Fonts**:
-    - [x] Configure `next/font/google` for "Plus Jakarta Sans" and "Gulzar".
-    - [x] Add them as CSS variables in `layout.tsx`.
-- [x] **Tailwind Config**:
-    - [x] Extend theme with "Deep Ocean" colors.
-    - [x] Add `font-sans` and `font-urdu` families.
-    - [x] Add fluid spacing/font-size utilities.
-- [x] **Global CSS**:
-    - [x] Reset CSS for dark mode default.
-    - [x] Add scrollbar styling (thin, dark).
+- [x] **Dependencies**: Install `zod`, `gray-matter` (or `next-mdx-remote/rsc`).
+- [x] **Schema Definition**:
+    - [x] Create `src/lib/schema.ts`.
+    - [x] Define `LessonSchema` and `CourseSchema`.
+- [x] **Content Parser**:
+    - [x] Debug failing test: `should throw on invalid frontmatter` (gray-matter receiving undefined?).
+    - [x] Create `getLesson(slug)` and `getAllLessons()`.
+    - [x] Implement strict `safeParse` logic.
+
+
+- [x] **Route Handler**:
+    - [x] Create `app/[course]/[slug]/page.tsx` (Shell only, no UI yet).
+    - [x] Verify it receives props correctly.
+- [x] **AI Content Conversion**:
+    - [x] User provides plain text (English/Urdu).
+    - [x] Agent converts to MDX + Zod structure.
+    - [x] Agent auto-generates `search_metadata` (transliteration).
 
 ## ✅ Definition of Done
-- [x] The "Hello World" page looks "Premium" (Dark bg, correct fonts).
-- [x] `pnpm run lint` passes.
-- [x] Tailwind IntelliSense works with custom tokens.
+- [x] Zod schema catches invalid content.
+- [x] `getAllLessons()` returns strictly typed data.
+- [x] Unit tests pass for the parser.

@@ -1,5 +1,5 @@
 # 📍 Task: Content Architecture (MDX & Zod)
-> **Status**: 🔴 TODO
+> **Status**: ✅ DONE
 > **Source**: [prd.md#phase-2-core-architecture-week-2](file:///home/ahmer/Desktop/smartWay/learning/prd.md#phase-2-core-architecture-week-2)
 > **Next Task**: [03-feature-implementation.md](file:///home/ahmer/Desktop/smartWay/learning/roadmap/03-feature-implementation.md)
 > **Dependencies**: [01-setup-and-foundation.md](file:///home/ahmer/Desktop/smartWay/learning/roadmap/01-setup-and-foundation.md)
@@ -10,6 +10,7 @@
 
 ## 🎯 Objective
 Build the "Content Engine" that safely reads, validates, and serves bilingual MDX content. This is the **database** of the application.
+for now just there is chapter 1 we add other later /home/ahmer/Desktop/smartWay/learning/content /forex intro.md
 
 ## 🧠 Context & Rules
 ### Data Integrity
@@ -33,22 +34,22 @@ Build the "Content Engine" that safely reads, validates, and serves bilingual MD
 *   [ ] **Refactor**: Optimize FS reads with caching (if needed).
 
 ## 🏗️ Implementation Steps
-- [ ] **Dependencies**: Install `zod`, `gray-matter` (or `next-mdx-remote/rsc`).
-- [ ] **Schema Definition**:
-    - [ ] Create `src/lib/schema.ts`.
-    - [ ] Define `LessonSchema` and `CourseSchema`.
-- [ ] **Content Parser**:
-    - [ ] Create `getLesson(slug)` and `getAllLessons()`.
-    - [ ] Implement strict `safeParse` logic.
-- [ ] **Route Handler**:
-    - [ ] Create `app/[course]/[slug]/page.tsx` (Shell only, no UI yet).
-    - [ ] Verify it receives props correctly.
-- [ ] **AI Content Conversion**:
-    - [ ] User provides plain text (English/Urdu).
-    - [ ] Agent converts to MDX + Zod structure.
-    - [ ] Agent auto-generates `search_metadata` (transliteration).
+- [x] **Dependencies**: Install `zod`, `gray-matter` (or `next-mdx-remote/rsc`).
+- [x] **Schema Definition**:
+    - [x] Create `src/lib/schema.ts`.
+    - [x] Define `LessonSchema` and `CourseSchema`.
+- [x] **Content Parser**:
+    - [x] Create `getLesson(slug)` and `getAllLessons()`.
+    - [x] Implement strict `safeParse` logic.
+- [x] **Route Handler**:
+    - [x] Create `app/[course]/[slug]/page.tsx` (Shell only, no UI yet).
+    - [x] Verify it receives props correctly.
+- [x] **AI Content Conversion**:
+    - [x] User provides plain text (English/Urdu).
+    - [x] Agent converts to MDX + Zod structure.
+    - [x] Agent auto-generates `search_metadata` (transliteration).
 
 ## ✅ Definition of Done
-- [ ] Zod schema catches invalid content.
-- [ ] `getAllLessons()` returns strictly typed data.
-- [ ] Unit tests pass for the parser.
+- [x] Zod schema catches invalid content.
+- [x] `getAllLessons()` returns strictly typed data.
+- [x] Unit tests pass for the parser.

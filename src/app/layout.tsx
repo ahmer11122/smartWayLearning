@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${plusJakarta.variable} ${gulzar.variable} antialiased`}
+        className={`${plusJakarta.variable} ${gulzar.variable} antialiased bg-bg-APP text-text-PRIMARY min-h-screen`}
       >
         {children}
       </body>
