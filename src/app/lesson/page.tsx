@@ -41,6 +41,39 @@ export default async function LessonPage() {
                 "۶۔ ٹریڈ کا وقت",
                 "۷۔ رسک فیکٹر",
             ],
+            // Mapped visuals for specific indices
+            visualsMap: {
+                // 1. Market (Mandi)
+                0: [
+                    { src: "/assets/visuals/sabzi-mandi.webp", labelEn: "Sabzi Mandi", labelUr: "سبزی منڈی" },
+                    { src: "/assets/visuals/ghalla-mandi.webp", labelEn: "Ghalla Mandi", labelUr: "غلہ منڈی" },
+                    { src: "/assets/visuals/motorcycle-market.webp", labelEn: "Motorcycle Market", labelUr: "موٹر سائیکل مارکیٹ" },
+                ],
+                // 2. Investment or Product
+                1: [
+                    { src: "/assets/visuals/investment-product.webp", labelEn: "Physical Exchange", labelUr: "مال کا تبادلہ" }
+                ],
+                // 3. Time
+                2: [
+                    { src: "/assets/visuals/time-concept.webp", labelEn: "Time Passing", labelUr: "وقت کا گزرنا" }
+                ],
+                // 4. Hard Struggle
+                3: [
+                    { src: "/assets/visuals/hard-struggle.webp", labelEn: "Hard Labor", labelUr: "سخت مشقت" }
+                ],
+                // 5. Experience
+                4: [
+                    { src: "/assets/visuals/experience.webp", labelEn: "Years of Experience", labelUr: "برسوں کا تجربہ" }
+                ],
+                // 6. Time Frame To Trade
+                5: [
+                    { src: "/assets/visuals/time-frame.webp", labelEn: "Fixed Hours", labelUr: "محدود اوقات" }
+                ],
+                // 7. Risk Factor
+                6: [
+                    { src: "/assets/visuals/risk-factor.webp", labelEn: "Physical Risk", labelUr: "جسمانی نقصان کا خطرہ" }
+                ]
+            }
         },
         {
             id: "online-trade",
@@ -181,6 +214,10 @@ export default async function LessonPage() {
                             <ul className="flex flex-col">
                                 {section.contentEn.map((itemEn, i) => {
                                     const itemUr = section.contentUr[i];
+                                    // Helper to get visuals for this specific index
+                                    // @ts-ignore - straightforward index access
+                                    const explicitVisuals = section.visualsMap ? section.visualsMap[i] : null;
+
                                     return (
                                         <li
                                             key={i}
@@ -198,6 +235,28 @@ export default async function LessonPage() {
                                             >
                                                 {itemUr}
                                             </div>
+
+                                            {/* Visuals Grid - Render specifically for this item index */}
+                                            {explicitVisuals && (
+                                                <div className="flex flex-wrap justify-center gap-6 mt-4 pt-4 border-t border-border/30">
+                                                    {explicitVisuals.map((visual: any, idx: number) => (
+                                                        <div key={idx} className="flex flex-col gap-3 group/visual cursor-pointer w-full md:w-[31%]">
+                                                            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl bg-bg-SURFACE border border-border transition-all duration-300 group-hover/visual:shadow-lg group-hover/visual:border-brand-primary/20">
+                                                                <img
+                                                                    src={visual.src}
+                                                                    alt={visual.labelEn}
+                                                                    className="w-full h-full object-cover transition-transform duration-500 group-hover/visual:scale-105"
+                                                                    loading="lazy"
+                                                                />
+                                                            </div>
+                                                            <div className="flex flex-col items-center text-center gap-1">
+                                                                <span className="text-sm font-medium text-text-PRIMARY">{visual.labelEn}</span>
+                                                                <span className="text-lg font-urdu text-text-SECONDARY" dir="rtl">{visual.labelUr}</span>
+                                                            </div>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            )}
                                         </li>
                                     );
                                 })}
