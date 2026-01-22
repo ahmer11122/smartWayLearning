@@ -43,6 +43,7 @@
   /* Fonts */
   --font-sans: var(--font-sans);
   --font-urdu: var(--font-urdu);
+  --font-display: var(--font-display);
 }
 
 /* Base resets and global styles */
