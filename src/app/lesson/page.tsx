@@ -23,8 +23,8 @@ export default async function LessonPage() {
     const sections = [
         {
             id: "physical-market",
-            titleEn: "What is Physical Market Trading?",
-            titleUr: "فزیکل مارکیٹ ٹریڈنگ کیا ہے؟",
+            titleEn: "Traditional Markets – Introduction",
+            titleUr: "روایتی منڈیاں اور ان کا تعارف",
             contentEn: [
                 "1. Market (Mandi)",
                 "2. Investment or Product",
@@ -79,8 +79,8 @@ export default async function LessonPage() {
         },
         {
             id: "online-trade",
-            titleEn: "What is Online Trading?",
-            titleUr: "آن لائن ٹریڈنگ کیا ہے؟",
+            titleEn: "E-Commerce – Introduction",
+            titleUr: "ای کامرس کا تعارف",
             contentEn: [
                 "1. Platform (Software)",
                 "2. Investment or Product",
@@ -133,8 +133,8 @@ export default async function LessonPage() {
         },
         {
             id: "stock-market",
-            titleEn: "What is Stock Market Trading?",
-            titleUr: "اسٹاک مارکیٹ ٹریڈنگ کیا ہے؟",
+            titleEn: "Stock Market – Introduction",
+            titleUr: "اسٹاک مارکیٹ کا تعارف",
             contentEn: [
                 "1. Platform (National Exchange)",
                 "2. Investment",
@@ -187,8 +187,8 @@ export default async function LessonPage() {
         },
         {
             id: "digital-trade",
-            titleEn: "What is Digital Trading?",
-            titleUr: "ڈیجیٹل ٹریڈنگ کیا ہے؟",
+            titleEn: "Crypto Market – Introduction",
+            titleUr: "کرپٹو مارکیٹ کا تعارف",
             contentEn: [
                 "1. Platform (PMEX, Forex, Crypto Currency/Coin Market)",
                 "2. Investment",
@@ -241,8 +241,8 @@ export default async function LessonPage() {
         },
         {
             id: "forex-benefits",
-            titleEn: "What are the Benefits of Forex Market?",
-            titleUr: "فاریکس مارکیٹ کے فوائد کیا ہیں؟",
+            titleEn: "Forex Market – Introduction",
+            titleUr: "فاریکس مارکیٹ کا تعارف",
             contentEn: [
                 "1. International Market",
                 "2. Thousands of Pairs (Commodities, Indices, Currencies)",
