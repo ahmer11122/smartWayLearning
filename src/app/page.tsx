@@ -24,35 +24,35 @@ export default function Home() {
             <div className="backdrop-blur-md bg-white/5 border border-white/10 p-8 md:p-14 rounded-3xl shadow-2xl relative overflow-hidden group">
               {/* Decorative Glow */}
               <div className="absolute -top-24 -right-24 w-64 h-64 bg-brand-primary/20 rounded-full blur-3xl group-hover:bg-brand-primary/30 transition-all duration-1000" />
-              
+
               <div className="relative space-y-10">
-                
+
                 {/* Main Typography Block */}
                 <div className="space-y-4">
                   <h1 className="text-white leading-tight">
-                    <span 
-                      className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4" 
+                    <span
+                      className="block text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-4"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       Smart Way
                     </span>
-                    <span 
+                    <span
                       className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-italic font-light text-white/90"
                       style={{ fontFamily: 'var(--font-display)' }}
                     >
                       Learning Institute
                     </span>
                   </h1>
-                  
+
                   {/* Divider */}
                   <div className="w-24 h-1.5 bg-brand-primary my-8 rounded-full" />
 
                   {/* Urdu Title - Refined */}
-                  <h2 
+                  <h2
                     className="font-urdu text-4xl sm:text-5xl lg:text-6xl text-white/95 leading-[1.8] drop-shadow-sm"
                     dir="rtl"
                   >
-                     اسمارٹ وے لرننگ انسٹی ٹیوٹ
+                    اسمارٹ وے لرننگ انسٹی ٹیوٹ
                   </h2>
                 </div>
 
@@ -64,7 +64,7 @@ export default function Home() {
                 {/* Actions */}
                 <div className="pt-6">
                   <a
-                    href="/lesson"
+                    href="/roadmap"
                     className="inline-flex items-center justify-center gap-3 px-10 py-5 bg-brand-primary text-white font-medium text-xl rounded-xl hover:bg-brand-primary/90 transition-all duration-300 shadow-lg shadow-brand-primary/25 hover:translate-y-[-2px] hover:shadow-xl group"
                   >
                     <GraduationCap className="w-6 h-6" />
