@@ -15,15 +15,27 @@ export function Course02Content() {
             contentEn: [
                 "1. What Is Forex?",
                 "2. When Did Forex Start?",
-                "3. What is Trade in Forex?",
-                "4. What is Importance of Dollar In Forex?",
+                "3. What is the method of exchange in the modern era",
+                "4. When did Forex become connected with internet banking, and what benefits does it provide to people?",
             ],
             contentUr: [
                 "۱۔ فاریکس کیا ہے؟",
                 "۲۔ فاریکس کب شروع ہوا؟",
-                "۳۔ فاریکس میں تجارت کیا ہے؟",
-                "۴۔ فاریکس میں ڈالر کی اہمیت",
+                "۳۔ جدید دور میں تبادلے کا طریقہ کار کیا ہے؟",
+                "۴۔ فوریکس انٹرنیٹ بینکنگ کے ساتھ کب منسلک ہوئی اور اس کے لوگوں کو کیا فائدہ ہوتا ہے؟",
             ],
+            answersUr: [
+                "لفظ فوریکس دو الفاظ کا مجموعہ ہے جن میں پہلا لفظ \"فارن\" یعنی غیر ملکی اور دوسرا لفظ \"ایکسچینج\" یعنی تبادلہ یا لین دین ہے۔ دونوں لفظوں کو ملا کر اگر آسان زبان میں سمجھیں تو اس کا مطلب عالمی منڈی یا انٹرنیشنل مارکیٹ ہے جس میں آپ خرید و فروخت کر سکتے ہیں",
+                "جب سے یہ دنیا بنی ہے تب سے ہم ایک دوسرے کے ساتھ مختلف طریقوں سے تبادلہ یا ایکسچینج کرتے آ رہے ہیں۔ پرانے وقتوں میں خرید و فروخت میں چیزوں کے ساتھ چیزوں کا تبادلہ ہوتا تھا، مثلاً دانے لے کر چاول دے رہے ہیں، گڑ لے کر مرچ لے رہے ہیں وغیرہ وغیرہ۔",
+                "پرانے وقتوں سے لے کر اب تک کے دور میں تبادلہ بھی اپنی نوعیت بدلتا رہا ہے، مثلاً پہلے چیزوں کے ساتھ چیزوں کا تبادلہ، پھر سونا چاندی کے سکوں کے ساتھ خرید و فروخت، اور پھر ملکوں میں بادشاہوں۔ یا سلطنت کے نام کی کرنسی سکوں کی صورت میں، اور پھر ہر ملک اپنے گنتی والے سکے، اور پھر گنتی والے نوٹ یعنی پیپر کرنسی، اور اب ڈیجیٹل کرنسی۔ لہٰذا مختلف ادوار میں تبدیلی ہوتی ہوئی اب ڈیجیٹل کرنسی تک پہنچ چکی ہے اور اب جدید دور میں تبادلہ یعنی ایکسچینج بھی ڈیجیٹل طریقے سے ہی ہو رہی ہے۔",
+                "فوریکس 1980 میں انٹرنیٹ کی وجہ سے عام لوگوں کے لیے یعنی ریٹیل ٹریڈرز کے کاروبار کی وجہ بنی اور تب سے آن لائن ٹریڈنگ کا آغاز ہو گیا۔ انٹرنیٹ بینکنگ کی وجہ سے یہ مارکیٹ 23 گھنٹے کھلی رہتی ہے لہٰذا دن ہو یا رات ہو آپ اس مارکیٹ میں فائدہ اٹھا سکتے ہیں",
+            ],
+            visualsMap: {
+                0: [{ src: "/assets/visuals/forex-real-mandi.webp", labelEn: "Global Forex Market", labelUr: "عالمی فاریکس مارکیٹ" }],
+                1: [{ src: "/assets/visuals/forex-ancient-barter.webp", labelEn: "Ancient Barter System", labelUr: "قدیم تبادلہ" }],
+                2: [{ src: "/assets/visuals/modern-digital-exchange.webp", labelEn: "Evolution of Money", labelUr: "رقم کا ارتقاء" }],
+                3: [{ src: "/assets/visuals/forex-real-internet-banking.webp", labelEn: "Digital Banking & 24h Access", labelUr: "ڈیجیٹل بینکنگ اور ۲۴ گھنٹے رسائی" }],
+            }
         },
         {
             id: "basic-pairs",
@@ -231,6 +243,41 @@ export function Course02Content() {
                                         >
                                             {itemUr}
                                         </div>
+
+                                        {/* @ts-ignore */}
+                                        {section.answersUr && section.answersUr[i] && (
+                                            <div
+                                                className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu text-right pr-2 mt-6 pt-6 border-t border-border/20 tracking-wide"
+                                                dir="rtl"
+                                            >
+                                                {/* @ts-ignore */}
+                                                {section.answersUr[i]}
+                                            </div>
+                                        )}
+
+                                        {/* @ts-ignore */}
+                                        {section.visualsMap && section.visualsMap[i] && (
+                                            <div className="flex flex-wrap justify-center gap-6 mt-6 pt-6 border-t border-border/10">
+                                                {/* @ts-ignore */}
+                                                {section.visualsMap[i].map((visual: any, idx: number) => (
+                                                    <div key={idx} className={`flex flex-col gap-3 group/visual cursor-pointer w-full ${visual.wide ? 'md:w-[65%]' : 'md:w-[45%]'}`}>
+                                                        <div className={`relative ${visual.wide ? 'aspect-[16/9]' : 'aspect-video'} w-full overflow-hidden rounded-2xl bg-bg-SURFACE border border-border/40 transition-all duration-500 group-hover/visual:shadow-2xl group-hover/visual:border-brand-primary/30 group-hover/visual:scale-[1.02]`}>
+                                                            <img
+                                                                src={visual.src}
+                                                                alt={visual.labelEn}
+                                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/visual:scale-110"
+                                                                loading="lazy"
+                                                            />
+                                                            <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover/visual:opacity-100 transition-opacity" />
+                                                        </div>
+                                                        <div className="flex flex-col items-center text-center gap-3 mt-2">
+                                                            <span className="text-sm font-semibold text-text-PRIMARY/80 tracking-wide uppercase leading-relaxed">{visual.labelEn}</span>
+                                                            <span className="text-xl lg:text-2xl font-urdu text-text-SECONDARY leading-relaxed" dir="rtl">{visual.labelUr}</span>
+                                                        </div>
+                                                    </div>
+                                                ))}
+                                            </div>
+                                        )}
                                     </li>
                                 );
                             })}
