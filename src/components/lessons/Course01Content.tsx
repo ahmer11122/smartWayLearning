@@ -6,8 +6,17 @@ import { QuestionCard } from "@/components/content/QuestionCard";
  * Course 1 (Chapter 1) Content Component
  * Contains all the structured content for Introduction to Markets
  */
+interface Section {
+    id: string;
+    titleEn: string;
+    titleUr: string;
+    contentEn: string[];
+    contentUr: string[];
+    visualsMap?: Record<number, { src: string; labelEn: string; labelUr: string; wide?: boolean }[]>;
+}
+
 export function Course01Content() {
-    const sections = [
+    const sections: Section[] = [
         {
             id: "physical-market",
             titleEn: "Traditional Markets – Introduction",
@@ -256,8 +265,7 @@ export function Course01Content() {
                         <ul className="flex flex-col">
                             {section.contentEn.map((itemEn, i) => {
                                 const itemUr = section.contentUr[i];
-                                // @ts-ignore
-                                const explicitVisuals = section.visualsMap ? section.visualsMap[i] : null;
+                                const visuals = section.visualsMap?.[i];
 
                                 return (
                                     <li
@@ -275,9 +283,9 @@ export function Course01Content() {
                                             {itemUr}
                                         </div>
 
-                                        {explicitVisuals && (
+                                        {visuals && (
                                             <div className="flex flex-wrap justify-center gap-6 mt-4 pt-4 border-t border-border/30">
-                                                {explicitVisuals.map((visual: any, idx: number) => (
+                                                {visuals.map((visual, idx: number) => (
                                                     <div key={idx} className={`flex flex-col gap-3 group/visual cursor-pointer w-full ${visual.wide ? 'md:w-[65%]' : 'md:w-[31%]'}`}>
                                                         <div className={`relative ${visual.wide ? 'aspect-[16/9]' : 'aspect-[4/3]'} w-full overflow-hidden rounded-xl bg-bg-SURFACE border border-border transition-all duration-300 group-hover/visual:shadow-lg group-hover/visual:border-brand-primary/20`}>
                                                             <img

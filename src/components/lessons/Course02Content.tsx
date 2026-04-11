@@ -1,13 +1,56 @@
 "use client";
 
+import { useState, useRef } from "react";
 import { QuestionCard } from "@/components/content/QuestionCard";
+import { Play, Square } from "lucide-react";
 
 /**
  * Course 2 (Chapter 2) Content Component
  * Basic Forex Course - exact same design as Course 1
  */
+interface TableAnswer {
+    isTable: boolean;
+    headers: string[];
+    rows: string[][];
+}
+
+interface Section {
+    id: string;
+    titleEn: string;
+    titleUr: string;
+    contentEn: string[];
+    contentUr: string[];
+    answersUr?: (string | TableAnswer)[];
+    visualsMap?: Record<number, { src: string; labelEn: string; labelUr: string }[]>;
+    audioMap?: Record<number, string>;
+}
+
 export function Course02Content() {
-    const sections = [
+    const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+    const toggleAudio = (src: string, index: number) => {
+        if (playingIndex === index) {
+            audioRef.current?.pause();
+            if (audioRef.current) audioRef.current.currentTime = 0;
+            setPlayingIndex(null);
+        } else {
+            if (audioRef.current) {
+                audioRef.current.pause();
+                audioRef.current.src = src;
+                audioRef.current.play();
+                setPlayingIndex(index);
+                audioRef.current.onended = () => setPlayingIndex(null);
+            } else {
+                const audio = new Audio(src);
+                audioRef.current = audio;
+                audio.play();
+                setPlayingIndex(index);
+                audio.onended = () => setPlayingIndex(null);
+            }
+        }
+    };
+    const sections: Section[] = [
         {
             id: "intro-forex",
             titleEn: "Introduction of Forex",
@@ -57,6 +100,10 @@ export function Course02Content() {
                     { src: "/assets/visuals/hard-struggle.webp", labelEn: "Traditional Business Struggle", labelUr: "روایتی کاروبار کی محنت" },
                     { src: "/assets/visuals/online-soft-struggle.webp", labelEn: "Forex Digital Lifestyle", labelUr: "فاریکس ڈیجیٹل لائف اسٹائل" }
                 ],
+            },
+            audioMap: {
+                0: "/assets/audio/lessons/what-is-forex.mp3",
+                1: "/assets/audio/lessons/when-did-forex-start.mp3"
             }
         },
         {
@@ -249,14 +296,32 @@ export function Course02Content() {
                         <ul className="flex flex-col">
                             {section.contentEn.map((itemEn, i) => {
                                 const itemUr = section.contentUr[i];
+                                const audioSrc = section.audioMap?.[i];
+                                const answer = section.answersUr?.[i];
+                                const visuals = section.visualsMap?.[i];
 
                                 return (
                                     <li
                                         key={i}
                                         className="flex flex-col gap-4 group py-6 border-b border-border last:border-0 first:pt-2"
                                     >
-                                        <div className="text-text-PRIMARY text-lg lg:text-xl font-medium leading-relaxed pl-3 border-l-2 border-transparent group-hover:border-brand-primary/30 transition-colors">
-                                            {itemEn}
+                                        <div className="flex items-center justify-between gap-4">
+                                            <div className="text-text-PRIMARY text-lg lg:text-xl font-medium leading-relaxed pl-3 border-l-2 border-transparent group-hover:border-brand-primary/30 transition-colors">
+                                                {itemEn}
+                                            </div>
+                                            {audioSrc && (
+                                                <button
+                                                    onClick={() => toggleAudio(audioSrc, i)}
+                                                    className="p-2 rounded-full bg-brand-primary/10 hover:bg-brand-primary/20 transition-all active:scale-95 text-brand-primary"
+                                                    title="Listen to Question"
+                                                >
+                                                    {playingIndex === i ? (
+                                                        <Square className="w-5 h-5 fill-current" />
+                                                    ) : (
+                                                        <Play className="w-5 h-5 fill-current" />
+                                                    )}
+                                                </button>
+                                            )}
                                         </div>
 
                                         <div
@@ -266,21 +331,18 @@ export function Course02Content() {
                                             {itemUr}
                                         </div>
 
-                                        {/* @ts-ignore */}
-                                        {section.answersUr && section.answersUr[i] && (
+                                        {answer && (
                                             <div
                                                 className="mt-6 pt-6 border-t border-border/20"
                                                 dir="rtl"
                                             >
-                                                {/* @ts-ignore */}
-                                                {typeof section.answersUr[i] === 'object' && section.answersUr[i].isTable ? (
+                                                {typeof answer === 'object' && answer.isTable ? (
                                                     <div className="overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
                                                         <table className="w-full text-right border-collapse min-w-[800px]">
                                                             <thead>
                                                                 <tr className="bg-brand-primary/10 border-b border-border/30">
                                                                     <th className="px-6 py-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
-                                                                    {/* @ts-ignore */}
-                                                                    {section.answersUr[i].headers.map((header: string, hIdx: number) => (
+                                                                    {answer.headers.map((header: string, hIdx: number) => (
                                                                         <th key={hIdx} className="px-8 py-6 text-text-PRIMARY font-urdu text-2xl lg:text-4xl font-bold border-l border-border/20 last:border-0">
                                                                             {header}
                                                                         </th>
@@ -288,8 +350,7 @@ export function Course02Content() {
                                                                 </tr>
                                                             </thead>
                                                             <tbody>
-                                                                {/* @ts-ignore */}
-                                                                {section.answersUr[i].rows.map((row: string[], rIdx: number) => (
+                                                                {answer.rows.map((row: string[], rIdx: number) => (
                                                                     <tr key={rIdx} className="border-b border-border/10 last:border-0 hover:bg-brand-primary/5 transition-colors">
                                                                         <td className="px-6 py-6 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
                                                                         {row.map((cell, cIdx) => (
@@ -308,18 +369,15 @@ export function Course02Content() {
                                                     </div>
                                                 ) : (
                                                     <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide">
-                                                        {/* @ts-ignore */}
-                                                        {section.answersUr[i]}
+                                                        {answer as string}
                                                     </div>
                                                 )}
                                             </div>
                                         )}
 
-                                        {/* @ts-ignore */}
-                                        {section.visualsMap && section.visualsMap[i] && (
+                                        {visuals && (
                                             <div className="flex flex-wrap justify-center gap-6 mt-6 pt-6 border-t border-border/10">
-                                                {/* @ts-ignore */}
-                                                {section.visualsMap[i].map((visual: any, idx: number) => (
+                                                {visuals.map((visual: any, idx: number) => (
                                                     <div key={idx} className={`flex flex-col gap-3 group/visual cursor-pointer w-full ${visual.wide ? 'md:w-[65%]' : 'md:w-[45%]'}`}>
                                                         <div className={`relative ${visual.wide ? 'aspect-[16/9]' : 'aspect-video'} w-full overflow-hidden rounded-2xl bg-bg-SURFACE border border-border/40 transition-all duration-500 group-hover/visual:shadow-2xl group-hover/visual:border-brand-primary/30 group-hover/visual:scale-[1.02]`}>
                                                             <img
