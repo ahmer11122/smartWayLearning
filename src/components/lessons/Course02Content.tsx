@@ -36,9 +36,9 @@ export function Course02Content() {
                     headers: ["روایتی کاروبار", "فوریکس"],
                     rows: [
                         ["کاروبار کے لیے دکان یا مخصوص جگہ کی ضرورت ہوتی ہے", "کسی دکان یا جگہ کی ضرورت نہیں ہوتی"],
-                        ["بہت زیادہ سخت محنت کرنا پڑتی ہے", "کم کام ہوتا ہے، نسبتاً سافٹ اسٹرگل ہوتی ہے"],
+                        ["بہت زیادہ سخت محنت کرنا پڑتی ہے", "بہت زیادہ سخت محنت نہیں کرنی پڑتی۔"],
                         ["کام کا وقت فکس ہوتا ہے (اوپن اور کلوز ٹائم مقرر)", "کوئی فکس ٹائم نہیں، مارکیٹ تقریباً 23 گھنٹے کھلی رہتی ہے"],
-                        ["کسٹمر اور پروڈکٹ لازمی ہوتے ہیں، ان کے بغیر کاروبار نہیں چل سکتا", "کسٹمر کی ضرورت نہیں، صرف بائے اور سیل کے بٹن سے ٹریڈ ہوتی ہے"],
+                        ["کسٹمر یا پروڈکٹ لازمی ہوتے ہیں، ان کے بغیر کاروبار نہیں چل سکتا", "کسٹمر کی ضرورت نہیں، صرف Buy اور Sell کے بٹن سے ٹریڈ ہوتی ہے"],
                         ["زیادہ انویسٹمنٹ اور انفراسٹرکچر چاہیے ہوتا ہے", "کم انویسٹمنٹ سے بھی شروع کیا جا سکتا ہے، انفراسٹرکچر نہیں چاہیے"],
                         ["زیادہ وقت لگتا ہے، پھر جا کر منافع شروع ہوتا ہے (ہٹی چٹی اور کھٹی والا سلو سسٹم)", "فوراً ٹریڈنگ شروع ہو سکتی ہے، منافع اور نقصان فوری ہوتا ہے"],
                         ["عموماً ایک ہی کاروبار تک محدود رہتے ہیں", "ایک ہی وقت میں مختلف مارکیٹس (کرنسی، میٹل، انڈیکس، کرپٹو) میں ٹریڈ ممکن ہے"],
@@ -275,13 +275,13 @@ export function Course02Content() {
                                                 {/* @ts-ignore */}
                                                 {typeof section.answersUr[i] === 'object' && section.answersUr[i].isTable ? (
                                                     <div className="overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
-                                                        <table className="w-full text-right border-collapse">
+                                                        <table className="w-full text-right border-collapse min-w-[800px]">
                                                             <thead>
                                                                 <tr className="bg-brand-primary/10 border-b border-border/30">
-                                                                    <th className="p-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
+                                                                    <th className="px-6 py-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
                                                                     {/* @ts-ignore */}
                                                                     {section.answersUr[i].headers.map((header: string, hIdx: number) => (
-                                                                        <th key={hIdx} className="p-6 text-text-PRIMARY font-urdu text-2xl lg:text-3xl font-bold border-l border-border/20 last:border-0">
+                                                                        <th key={hIdx} className="px-8 py-6 text-text-PRIMARY font-urdu text-2xl lg:text-4xl font-bold border-l border-border/20 last:border-0">
                                                                             {header}
                                                                         </th>
                                                                     ))}
@@ -291,10 +291,14 @@ export function Course02Content() {
                                                                 {/* @ts-ignore */}
                                                                 {section.answersUr[i].rows.map((row: string[], rIdx: number) => (
                                                                     <tr key={rIdx} className="border-b border-border/10 last:border-0 hover:bg-brand-primary/5 transition-colors">
-                                                                        <td className="p-4 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
+                                                                        <td className="px-6 py-6 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
                                                                         {row.map((cell, cIdx) => (
-                                                                            <td key={cIdx} className="p-4 text-text-SECONDARY/80 font-urdu text-xl lg:text-2xl leading-relaxed border-l border-border/20 last:border-0">
-                                                                                {cell}
+                                                                            <td key={cIdx} className="px-8 py-6 text-text-SECONDARY/80 font-urdu text-2xl lg:text-3xl leading-[2.4] tracking-[0.05em] border-l border-border/20 last:border-0">
+                                                                                {cell.split(/(\s+)/).map((part: string, pIdx: number) => {
+                                                                                    if (part.toLowerCase() === "buy") return <span key={pIdx} className="text-green-500 font-bold font-sans mx-1">{part}</span>;
+                                                                                    if (part.toLowerCase() === "sell") return <span key={pIdx} className="text-red-500 font-bold font-sans mx-1">{part}</span>;
+                                                                                    return part;
+                                                                                })}
                                                                             </td>
                                                                         ))}
                                                                     </tr>
