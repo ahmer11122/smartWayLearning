@@ -130,4 +130,4 @@ Analysis:
 . What is Technical Analysis?
 . Benefits of Forex
  Benefits of Beginner trading
-. Open Real trading account and Earn
+. Open Real trading account and Earn////
