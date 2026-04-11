@@ -17,24 +17,46 @@ export function Course02Content() {
                 "2. When Did Forex Start?",
                 "3. What is the method of exchange in the modern era",
                 "4. When did Forex become connected with internet banking, and what benefits does it provide to people?",
+                "5. What is the difference between traditional business and Forex?",
             ],
             contentUr: [
                 "۱۔ فاریکس کیا ہے؟",
                 "۲۔ فاریکس کب شروع ہوئی؟",
                 "۳۔ جدید دور میں تبادلے کا طریقہ کار کیا ہے؟",
                 "۴۔ فوریکس انٹرنیٹ بینکنگ کے ساتھ کب منسلک ہوئی ؟ اور اس سے لوگوں کو کیا فائدہ ہوا",
+                "۵۔ روایتی کاروبار اور فوریکس میں کیا فرق ہے؟",
             ],
             answersUr: [
                 "لفظ فوریکس دو الفاظ کا مجموعہ ہے جن میں پہلا لفظ \"فارن\" یعنی غیر ملکی اور دوسرا لفظ \"ایکسچینج\" یعنی تبادلہ یا لین دین ہے۔ دونوں لفظوں کو ملا کر اگر آسان زبان میں سمجھیں تو اس کا مطلب عالمی منڈی یا انٹرنیشنل مارکیٹ ہے جس میں آپ خرید و فروخت کر سکتے ہیں",
                 "جب سے یہ دنیا بنی ہے تب سے ہم ایک دوسرے کے ساتھ مختلف طریقوں سے تبادلہ یا ایکسچینج کرتے آ رہے ہیں۔ پرانے وقتوں میں خرید و فروخت میں چیزوں کے ساتھ چیزوں کا تبادلہ ہوتا تھا، مثلاً دانے لے کر چاول دے رہے ہیں، گڑ دے کر مرچ لے رہے ہیں وغیرہ وغیرہ۔",
                 "پرانے وقتوں سے لے کر اب تک کے دور میں تبادلہ بھی اپنی نوعیت بدلتا رہا ہے، مثلاً پہلے چیزوں کے ساتھ چیزوں کا تبادلہ، پھر سونا چاندی کے سکوں کے ساتھ خرید و فروخت، اور پھر ملکوں میں بادشاہوں۔ یا سلطنت کے نام کی کرنسی سکوں کی صورت میں، اور پھر ہر ملک اپنے گنتی والے سکے، اور پھر گنتی والے نوٹ یعنی پیپر کرنسی، اور اب ڈیجیٹل کرنسی۔ لہٰذا مختلف ادوار میں تبدیلی ہوتی ہوئی اب ڈیجیٹل کرنسی تک پہنچ چکی ہے اور اب جدید دور میں تبادلہ یعنی ایکسچینج بھی ڈیجیٹل طریقے سے ہی ہو رہی ہے۔",
                 "فوریکس انٹرنیٹ بینکنگ کے ساتھ کب منسلک ہوئی ؟ اور اس سے لوگوں کو کیا فائدہ ہوا\nفوریکس 1980 میں انٹرنیٹ کی وجہ سے عام لوگوں کے لیے یعنی ریٹیل ٹریڈرز کے کاروبار کی وجہ بنی اور تب سے آن لائن ٹریڈنگ کا آغاز ہو گیا۔ انٹرنیٹ بینکنگ کی وجہ سے یہ مارکیٹ 23 گھنٹے کھلی رہتی ہے لہٰذا دن ہو یا رات ہو آپ اس مارکیٹ میں فائدہ اٹھا سکتے ہیں",
+                {
+                    isTable: true,
+                    headers: ["روایتی کاروبار", "فوریکس"],
+                    rows: [
+                        ["کاروبار کے لیے دکان یا مخصوص جگہ کی ضرورت ہوتی ہے", "کسی دکان یا جگہ کی ضرورت نہیں ہوتی"],
+                        ["بہت زیادہ سخت محنت کرنا پڑتی ہے", "کم کام ہوتا ہے، نسبتاً سافٹ اسٹرگل ہوتی ہے"],
+                        ["کام کا وقت فکس ہوتا ہے (اوپن اور کلوز ٹائم مقرر)", "کوئی فکس ٹائم نہیں، مارکیٹ تقریباً 23 گھنٹے کھلی رہتی ہے"],
+                        ["کسٹمر اور پروڈکٹ لازمی ہوتے ہیں، ان کے بغیر کاروبار نہیں چل سکتا", "کسٹمر کی ضرورت نہیں، صرف بائے اور سیل کے بٹن سے ٹریڈ ہوتی ہے"],
+                        ["زیادہ انویسٹمنٹ اور انفراسٹرکچر چاہیے ہوتا ہے", "کم انویسٹمنٹ سے بھی شروع کیا جا سکتا ہے، انفراسٹرکچر نہیں چاہیے"],
+                        ["زیادہ وقت لگتا ہے، پھر جا کر منافع شروع ہوتا ہے (ہٹی چٹی اور کھٹی والا سلو سسٹم)", "فوراً ٹریڈنگ شروع ہو سکتی ہے، منافع اور نقصان فوری ہوتا ہے"],
+                        ["عموماً ایک ہی کاروبار تک محدود رہتے ہیں", "ایک ہی وقت میں مختلف مارکیٹس (کرنسی، میٹل، انڈیکس، کرپٹو) میں ٹریڈ ممکن ہے"],
+                        ["موسمی حالات، ہڑتالیں، اور چھٹیاں کاروبار کو متاثر کرتی ہیں", "زیادہ تر بیرونی رکاوٹوں سے آزاد، مسلسل مارکیٹ چلتی رہتی ہے"],
+                        ["وقت کے ساتھ منافع بڑھتا ہے (time = profit)", "کم وقت میں زیادہ منافع ممکن، مگر رسک بھی زیادہ ہوتا ہے"],
+                        ["کامیابی کے لیے ڈگری، سرمایہ اور تجربہ ضروری ہوتا ہے", "ڈگری ضروری نہیں، بنیادی سکلز سے 3–6 ماہ میں سیکھا جا سکتا ہے"],
+                    ]
+                },
             ],
             visualsMap: {
                 0: [{ src: "/assets/visuals/forex-real-mandi.webp", labelEn: "Global Forex Market", labelUr: "عالمی فاریکس مارکیٹ" }],
                 1: [{ src: "/assets/visuals/forex-ancient-barter.webp", labelEn: "Ancient Barter System", labelUr: "قدیم تبادلہ" }],
                 2: [{ src: "/assets/visuals/modern-digital-exchange.webp", labelEn: "Evolution of Money", labelUr: "رقم کا ارتقاء" }],
                 3: [{ src: "/assets/visuals/forex-real-internet-banking.webp", labelEn: "Digital Banking & 24h Access", labelUr: "ڈیجیٹل بینکنگ اور ۲۴ گھنٹے رسائی" }],
+                4: [
+                    { src: "/assets/visuals/hard-struggle.webp", labelEn: "Traditional Business Struggle", labelUr: "روایتی کاروبار کی محنت" },
+                    { src: "/assets/visuals/online-soft-struggle.webp", labelEn: "Forex Digital Lifestyle", labelUr: "فاریکس ڈیجیٹل لائف اسٹائل" }
+                ],
             }
         },
         {
@@ -247,11 +269,45 @@ export function Course02Content() {
                                         {/* @ts-ignore */}
                                         {section.answersUr && section.answersUr[i] && (
                                             <div
-                                                className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu text-right pr-2 mt-6 pt-6 border-t border-border/20 tracking-wide"
+                                                className="mt-6 pt-6 border-t border-border/20"
                                                 dir="rtl"
                                             >
                                                 {/* @ts-ignore */}
-                                                {section.answersUr[i]}
+                                                {typeof section.answersUr[i] === 'object' && section.answersUr[i].isTable ? (
+                                                    <div className="overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
+                                                        <table className="w-full text-right border-collapse">
+                                                            <thead>
+                                                                <tr className="bg-brand-primary/10 border-b border-border/30">
+                                                                    <th className="p-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
+                                                                    {/* @ts-ignore */}
+                                                                    {section.answersUr[i].headers.map((header: string, hIdx: number) => (
+                                                                        <th key={hIdx} className="p-6 text-text-PRIMARY font-urdu text-2xl lg:text-3xl font-bold border-l border-border/20 last:border-0">
+                                                                            {header}
+                                                                        </th>
+                                                                    ))}
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                {/* @ts-ignore */}
+                                                                {section.answersUr[i].rows.map((row: string[], rIdx: number) => (
+                                                                    <tr key={rIdx} className="border-b border-border/10 last:border-0 hover:bg-brand-primary/5 transition-colors">
+                                                                        <td className="p-4 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
+                                                                        {row.map((cell, cIdx) => (
+                                                                            <td key={cIdx} className="p-4 text-text-SECONDARY/80 font-urdu text-xl lg:text-2xl leading-relaxed border-l border-border/20 last:border-0">
+                                                                                {cell}
+                                                                            </td>
+                                                                        ))}
+                                                                    </tr>
+                                                                ))}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                ) : (
+                                                    <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide">
+                                                        {/* @ts-ignore */}
+                                                        {section.answersUr[i]}
+                                                    </div>
+                                                )}
                                             </div>
                                         )}
 
