@@ -121,7 +121,7 @@ export function Course02Content() {
                 "۳۔ فوریکس میں زیادہ تر ٹریڈ ڈالر میں کیوں ہوتی ہے اور ڈالر کی اہمیت فوریکس میں کیوں ہے؟",
             ],
             answersUr: [
-                "فوریکس مارکیٹ دنیا کی سب سے بڑی مارکیٹ کا نام ہے جس میں روزانہ کی بنیاد پر 7 ٹریلین ڈالر سے 10 ٹریلین ڈالر کا بزنس ہوتا ہے جو کہ پاکستانی روپے کے مطابق (1,959,010,000,000,00) بنتے ہیں، اگر ڈالر 279 روپے کا ہو۔",
+                "فوریکس مارکیٹ دنیا کی سب سے بڑی مارکیٹ کا نام ہے جس میں روزانہ کی بنیاد پر 7 ٹریلین ڈالر سے 10 ٹریلین ڈالر کا بزنس ہوتا ہے جو کہ پاکستانی روپے کے مطابق (1,959,010,000,000,000) بنتے ہیں، اگر ڈالر 279 روپے کا ہو۔",
                 "فوریکس دنیا کی سب سے بڑی مالیاتی مارکیٹ ہے۔ یہ ایک انٹرنیشنل اور ڈی سینٹرلائزڈ مارکیٹ ہے جو الیکٹرانک بینکنگ سسٹم کے ذریعے چلتی ہے اور تقریباً 23 گھنٹے (ہفتے میں 5 دن) کھلی رہتی ہے۔\n\nاس مارکیٹ کا روزانہ حجم (Daily Trading Volume) تقریباً 7 ٹریلین امریکی ڈالر سے بھی زیادہ ہے، جو اسے دنیا کی سب سے بڑی مارکیٹ بناتا ہے۔\n\nکرنسی کے استعمال کے لحاظ سے:\n\nامریکی ڈالر (USD) تقریباً 85-90% ٹریڈز میں شامل ہوتا ہے (سب سے زیادہ)\nیورو (EUR) دوسرے نمبر پر ہے (تقریباً 20-30%)\nجاپانی ین (JPY) تیسرے نمبر پر (تقریباً 15-20%)\nاس کے بعد:\nبرطانوی پاؤنڈ (GBP)\nآسٹریلین ڈالر (AUD)\nکینیڈین ڈالر (CAD)\nسوئس فرانک (CHF)\n\nباقی دنیا کی دیگر کرنسیاں نسبتاً کم تناسب میں شامل ہوتی ہیں",
                 "فوریکس مارکیٹ میں زیادہ تر ٹریڈ امریکی ڈالر (USD) میں ہوتی ہے کیونکہ یہ دنیا کی سب سے اہم اور مضبوط کرنسی ہے، جسے انٹرنیشنل ریزرو کرنسی کہا جاتا ہے۔\n\nڈالر کی اہمیت کی وجوہات درج ذیل ہیں:\n\n1۔ دنیا کی سب سے بڑی معیشت United States کی ہے، اس لیے عالمی تجارت میں اس کا کردار سب سے زیادہ ہے۔\n2۔ دنیا کی بڑی اسٹاک ایکسچینجز میں سے ایک New York Stock Exchange امریکہ میں موجود ہے۔\n3۔ امریکہ کے پاس دنیا کے بڑے گولڈ ریزرو موجود ہیں۔\n4۔ امریکہ ایک بڑی دفاعی طاقت ہے، جس سے عالمی اعتماد بڑھتا ہے۔\n5۔ امریکہ معاشی اور سیاسی طور پر مستحکم ملک ہے۔\n6۔ عالمی تجارت (خاص طور پر تیل اور بڑی اشیاء) زیادہ تر ڈالر میں ہوتی ہے۔\n\nاسی لیے ڈالر کو فوریکس مارکیٹ میں مرکزی حیثیت حاصل ہے اور زیادہ تر کرنسی پیئرز میں یہ شامل ہوتا ہے",
             ],
@@ -362,35 +362,92 @@ export function Course02Content() {
                                                 dir="rtl"
                                             >
                                                 {typeof answer === 'object' && answer.isTable ? (
-                                                    <div className="overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
-                                                        <table className="w-full text-right border-collapse min-w-[800px]">
-                                                            <thead>
-                                                                <tr className="bg-brand-primary/10 border-b border-border/30">
-                                                                    <th className="px-6 py-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
-                                                                    {answer.headers.map((header: string, hIdx: number) => (
-                                                                        <th key={hIdx} className="px-8 py-6 text-text-PRIMARY font-urdu text-2xl lg:text-4xl font-bold border-l border-border/20 last:border-0">
-                                                                            {header}
-                                                                        </th>
-                                                                    ))}
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                {answer.rows.map((row: string[], rIdx: number) => (
-                                                                    <tr key={rIdx} className="border-b border-border/10 last:border-0 hover:bg-brand-primary/5 transition-colors">
-                                                                        <td className="px-6 py-6 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
-                                                                        {row.map((cell, cIdx) => (
-                                                                            <td key={cIdx} className="px-8 py-6 text-text-SECONDARY/80 font-urdu text-2xl lg:text-3xl leading-[2.4] tracking-[0.05em] border-l border-border/20 last:border-0">
-                                                                                {cell.split(/(\s+)/).map((part: string, pIdx: number) => {
-                                                                                    if (part.toLowerCase() === "buy") return <span key={pIdx} className="text-green-500 font-bold font-sans mx-1">{part}</span>;
-                                                                                    if (part.toLowerCase() === "sell") return <span key={pIdx} className="text-red-500 font-bold font-sans mx-1">{part}</span>;
-                                                                                    return part;
-                                                                                })}
-                                                                            </td>
+                                                    <div className="w-full space-y-6">
+                                                        {/* Desktop View: Maintained exactly as requested */}
+                                                        <div className="hidden lg:block overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
+                                                            <table className="w-full text-right border-collapse min-w-[800px]">
+                                                                <thead>
+                                                                    <tr className="bg-brand-primary/10 border-b border-border/30">
+                                                                        <th className="px-6 py-6 text-text-PRIMARY font-urdu text-xl lg:text-2xl font-bold border-l border-border/20">#</th>
+                                                                        {answer.headers.map((header: string, hIdx: number) => (
+                                                                            <th key={hIdx} className="px-8 py-6 text-text-PRIMARY font-urdu text-2xl lg:text-4xl font-bold border-l border-border/20 last:border-0">
+                                                                                {header}
+                                                                            </th>
                                                                         ))}
                                                                     </tr>
-                                                                ))}
-                                                            </tbody>
-                                                        </table>
+                                                                </thead>
+                                                                <tbody>
+                                                                    {answer.rows.map((row: string[], rIdx: number) => (
+                                                                        <tr key={rIdx} className="border-b border-border/10 last:border-0 hover:bg-brand-primary/5 transition-colors">
+                                                                            <td className="px-6 py-6 text-text-SECONDARY/60 font-medium text-lg border-l border-border/20">{rIdx + 1}</td>
+                                                                            {row.map((cell, cIdx) => (
+                                                                                <td key={cIdx} className="px-8 py-6 text-text-SECONDARY/80 font-urdu text-2xl lg:text-3xl leading-[2.4] tracking-[0.05em] border-l border-border/20 last:border-0">
+                                                                                    {cell.split(/(\s+)/).map((part: string, pIdx: number) => {
+                                                                                        if (part.toLowerCase() === "buy") return <span key={pIdx} className="text-green-500 font-bold font-sans mx-1">{part}</span>;
+                                                                                        if (part.toLowerCase() === "sell") return <span key={pIdx} className="text-red-500 font-bold font-sans mx-1">{part}</span>;
+                                                                                        return part;
+                                                                                    })}
+                                                                                </td>
+                                                                            ))}
+                                                                        </tr>
+                                                                    ))}
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+
+                                                        {/* Mobile View: Premium No-Scroll Comparison Experience */}
+                                                        <div className="lg:hidden space-y-4" dir="rtl">
+                                                            {answer.rows.map((row: string[], rIdx: number) => (
+                                                                <div
+                                                                    key={rIdx}
+                                                                    className="bg-bg-SURFACE/60 rounded-2xl border border-border/20 p-5 shadow-sm hover:border-brand-primary/20 transition-all duration-300"
+                                                                >
+                                                                    {/* Comparison Point Index Header */}
+                                                                    <div className="flex items-center gap-3 mb-5">
+                                                                        <span className="w-8 h-8 rounded-full bg-brand-primary/10 flex items-center justify-center text-brand-primary font-bold text-sm font-sans ring-4 ring-brand-primary/5">
+                                                                            {rIdx + 1}
+                                                                        </span>
+                                                                        <div className="h-px flex-1 bg-gradient-to-r from-border/20 to-transparent" />
+                                                                    </div>
+
+                                                                    <div className="space-y-8">
+                                                                        {/* Section A: Traditional Business */}
+                                                                        <div className="space-y-3 group">
+                                                                            <div className="flex items-center gap-3">
+                                                                                <span className="text-base lg:text-lg font-urdu font-bold text-text-TERTIARY bg-text-TERTIARY/10 px-3 py-1 rounded-lg">
+                                                                                    {answer.headers[0]}
+                                                                                </span>
+                                                                                <div className="h-px flex-1 bg-border/20" />
+                                                                            </div>
+                                                                            <p className="text-xl font-urdu leading-[2.2] text-text-SECONDARY/90 pr-4 border-r-2 border-border/20">
+                                                                                {row[0]}
+                                                                            </p>
+                                                                        </div>
+
+                                                                        {/* Section B: Forex (Focal Point) */}
+                                                                        <div className="relative p-5 rounded-2xl bg-brand-primary/[0.03] border border-brand-primary/10 group">
+                                                                            <div className="relative z-10 space-y-4">
+                                                                                <div className="flex items-center gap-3">
+                                                                                    <span className="text-base lg:text-lg font-urdu font-bold text-brand-primary bg-brand-primary/10 px-3 py-1 rounded-lg ring-1 ring-brand-primary/20">
+                                                                                        {answer.headers[1]}
+                                                                                    </span>
+                                                                                    <div className="h-px flex-1 bg-brand-primary/20" />
+                                                                                </div>
+                                                                                <p className="text-2xl font-urdu leading-[2.2] text-brand-primary font-medium pr-4 border-r-2 border-brand-primary/30">
+                                                                                    {row[1].split(/(\s+)/).map((part: string, pIdx: number) => {
+                                                                                        if (part.toLowerCase() === "buy") return <span key={pIdx} className="text-green-500 font-bold font-sans mx-1 text-2xl lg:text-3xl">{part}</span>;
+                                                                                        if (part.toLowerCase() === "sell") return <span key={pIdx} className="text-red-500 font-bold font-sans mx-1 text-2xl lg:text-3xl">{part}</span>;
+                                                                                        return part;
+                                                                                    })}
+                                                                                </p>
+                                                                            </div>
+                                                                            {/* Background Glow */}
+                                                                            <div className="absolute top-0 left-0 w-32 h-32 bg-brand-primary/5 rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl group-hover:bg-brand-primary/10 transition-colors" />
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            ))}
+                                                        </div>
                                                     </div>
                                                 ) : (
                                                     <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide space-y-4">
