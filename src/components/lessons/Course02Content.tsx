@@ -107,6 +107,31 @@ export function Course02Content() {
             }
         },
         {
+            id: "forex-importance",
+            titleEn: "Importance of Forex",
+            titleUr: "فاریکس کی حیثیت",
+            contentEn: [
+                "1. How much business is conducted daily in the Forex market?",
+                "2. How large is the Forex market in terms of size, and which countries have the highest participation in Forex?",
+                "3. Why is most trading in Forex done in US Dollars, and why is the Dollar important in the Forex market?",
+            ],
+            contentUr: [
+                "۱۔ فوریکس مارکیٹ میں روزانہ کتنا کاروبار ہوتا ہے؟",
+                "۲۔ فوریکس سائز کے اعتبار سے کتنی بڑی مارکیٹ ہے اور کتنے ممالک ایسے ہیں جن کا زیادہ تر پیسہ فوریکس میں ہے؟",
+                "۳۔ فوریکس میں زیادہ تر ٹریڈ ڈالر میں کیوں ہوتی ہے اور ڈالر کی اہمیت فوریکس میں کیوں ہے؟",
+            ],
+            answersUr: [
+                "فوریکس مارکیٹ دنیا کی سب سے بڑی مارکیٹ کا نام ہے جس میں روزانہ کی بنیاد پر 7 ٹریلین ڈالر سے 10 ٹریلین ڈالر کا بزنس ہوتا ہے جو کہ پاکستانی روپے کے مطابق اگر ڈالر 279 روپے کا ہو تو روپے صرف 7 ٹریلین ڈالر بنے گا بنتے ہیں",
+                "فوریکس دنیا کی سب سے بڑی مالیاتی مارکیٹ ہے۔ یہ ایک انٹرنیشنل اور ڈی سینٹرلائزڈ مارکیٹ ہے جو الیکٹرانک بینکنگ سسٹم کے ذریعے چلتی ہے اور تقریباً 23 گھنٹے (ہفتے میں 5 دن) کھلی رہتی ہے۔\n\nاس مارکیٹ کا روزانہ حجم (Daily Trading Volume) تقریباً 7 ٹریلین امریکی ڈالر سے بھی زیادہ ہے، جو اسے دنیا کی سب سے بڑی مارکیٹ بناتا ہے۔\n\nکرنسی کے استعمال کے لحاظ سے:\n\nامریکی ڈالر (USD) تقریباً 85-90% ٹریڈز میں شامل ہوتا ہے (سب سے زیادہ)\nیورو (EUR) دوسرے نمبر پر ہے (تقریباً 20-30%)\nجاپانی ین (JPY) تیسرے نمبر پر (تقریباً 15-20%)\nاس کے بعد:\nبرطانوی پاؤنڈ (GBP)\nآسٹریلین ڈالر (AUD)\nکینیڈین ڈالر (CAD)\nسوئس فرانک (CHF)\n\nباقی دنیا کی دیگر کرنسیاں نسبتاً کم تناسب میں شامل ہوتی ہیں",
+                "فوریکس مارکیٹ میں زیادہ تر ٹریڈ امریکی ڈالر (USD) میں ہوتی ہے کیونکہ یہ دنیا کی سب سے اہم اور مضبوط کرنسی ہے، جسے انٹرنیشنل ریزرو کرنسی کہا جاتا ہے۔\n\nڈالر کی اہمیت کی وجوہات درج ذیل ہیں:\n\n1۔ دنیا کی سب سے بڑی معیشت United States کی ہے، اس لیے عالمی تجارت میں اس کا کردار سب سے زیادہ ہے۔\n2۔ دنیا کی بڑی اسٹاک ایکسچینجز میں سے ایک New York Stock Exchange امریکہ میں موجود ہے۔\n3۔ امریکہ کے پاس دنیا کے بڑے گولڈ ریزرو موجود ہیں۔\n4۔ امریکہ ایک بڑی دفاعی طاقت ہے، جس سے عالمی اعتماد بڑھتا ہے۔\n5۔ امریکہ معاشی اور سیاسی طور پر مستحکم ملک ہے۔\n6۔ عالمی تجارت (خاص طور پر تیل اور بڑی اشیاء) زیادہ تر ڈالر میں ہوتی ہے۔\n\nاسی لیے ڈالر کو فوریکس مارکیٹ میں مرکزی حیثیت حاصل ہے اور زیادہ تر کرنسی پیئرز میں یہ شامل ہوتا ہے",
+            ],
+            visualsMap: {
+                0: [{ src: "/assets/visuals/forex_market_size_visual.webp", labelEn: "Global Daily Volume ($7-10T)", labelUr: "روزانہ عالمی تجارت (7-10 ٹریلین ڈالر)" }],
+                1: [{ src: "/assets/visuals/forex_market_scale_comparison_v2.webp", labelEn: "Forex vs Stock Markets", labelUr: "فاریکس بمقابلہ اسٹاک مارکیٹ" }],
+                2: [{ src: "/assets/visuals/usd_global_dominance_visual.webp", labelEn: "USD Global Dominance", labelUr: "ڈالر کی عالمی برتری" }],
+            }
+        },
+        {
             id: "basic-pairs",
             titleEn: "Basic of Pairs",
             titleUr: "جوڑوں کی بنیادی باتیں",
@@ -368,8 +393,10 @@ export function Course02Content() {
                                                         </table>
                                                     </div>
                                                 ) : (
-                                                    <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide">
-                                                        {answer as string}
+                                                    <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide space-y-4">
+                                                        {(answer as string).split('\n').map((line, idx) => (
+                                                            <div key={idx}>{line}</div>
+                                                        ))}
                                                     </div>
                                                 )}
                                             </div>
