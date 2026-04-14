@@ -152,7 +152,7 @@ export function Course02Content() {
             ],
             visualsMap: {
                 0: [{ src: "/assets/visuals/forex_broker_bridge_visual.webp", labelEn: "Broker as a Digital Bridge", labelUr: "بروکر ایک ڈیجیٹل پل کے طور پر" }],
-                1: [{ src: "/assets/visuals/forex_intro_global_market.webp", labelEn: "Global Market Access", labelUr: "عالمی مارکیٹ تک رسائی" }],
+                1: [{ src: "/assets/visuals/forex-intro-global.webp", labelEn: "Global Market Access", labelUr: "عالمی مارکیٹ تک رسائی" }],
                 2: [{ src: "/assets/visuals/forex_execution_speed_visual.webp", labelEn: "Execution Speed & Spreads", labelUr: "آرڈر مکمل ہونے کی رفتار اور اسپریڈ" }],
             }
         },
