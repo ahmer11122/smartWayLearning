@@ -492,7 +492,7 @@ export function Course02Content() {
                                                             <img
                                                                 src={visual.src}
                                                                 alt={visual.labelEn}
-                                                                className="w-full h-full object-cover transition-transform duration-700 group-hover/visual:scale-110"
+                                                                className="w-full h-full object-contain transition-transform duration-700 group-hover/visual:scale-110 p-4"
                                                                 loading="lazy"
                                                             />
                                                             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover/visual:opacity-100 transition-opacity" />
