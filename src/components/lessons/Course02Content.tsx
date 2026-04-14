@@ -132,6 +132,31 @@ export function Course02Content() {
             }
         },
         {
+            id: "forex-broker",
+            titleEn: "Importance of Broker",
+            titleUr: "بروکر کی اہمیت",
+            contentEn: [
+                "1. What is a broker?",
+                "2. Why is a broker necessary?",
+                "3. What importance does a broker have in our profit and loss?",
+            ],
+            contentUr: [
+                "۱۔ بروکر کیا ہوتا ہے؟",
+                "۲۔ بروکر کیوں ضروری ہے؟",
+                "۳۔ بروکر کی ہمارے نفع و نقصان میں کیا اہمیت ہے؟",
+            ],
+            answersUr: [
+                "بروکر ایک ایسا درمیانی ادارہ یا پلیٹ فارم ہوتا ہے جو ٹریڈر اور مارکیٹ کے درمیان رابطہ فراہم کرتا ہے۔ بروکر کے ذریعے ہی ٹریڈر خرید و فروخت (Buy/Sell) کے آرڈر مارکیٹ میں داخل کرتا ہے۔ یہ آپ کو ٹریڈنگ کے لیے پلیٹ فارم، لیوریج، اور دیگر سہولیات فراہم کرتا ہے، اور اس کے بدلے کمیشن یا اسپریڈ وصول کرتا ہے۔",
+                "بروکر اس لیے ضروری ہوتا ہے کیونکہ عام فرد اپنے تھوڑے سرمائے کے ساتھ براہِ راست انٹرنیشنل مارکیٹ میں ٹریڈ نہیں کر سکتا۔ بروکر ایک پلیٹ فارم فراہم کرتا ہے جس کے ذریعے ٹریڈر آسانی سے خرید و فروخت کر سکتا ہے۔",
+                "بروکر کا براہِ راست ہمارے نفع یا نقصان میں کوئی کردار نہیں ہوتا، کیونکہ وہ صرف ٹریڈر کی ٹریڈ کو مارکیٹ تک پہنچانے کا کام کرتا ہے۔\n\nالبتہ بروکر بالواسطہ طور پر نفع و نقصان پر اثر انداز ہوتا ہے کیونکہ:\n\n1۔ بروکر ہر ٹریڈ پر اسپریڈ (Spread) یا کمیشن چارج کرتا ہے، جس سے منافع کم ہو سکتا ہے۔\n2۔ اگر بروکر کا اسپریڈ زیادہ ہو تو ٹریڈر کو نقصان ہو سکتا ہے۔\n3۔ بروکر کی execution speed (آرڈر مکمل ہونے کی رفتار) بھی اہم ہوتی ہے، سست رفتار نقصان کا باعث بن سکتی ہے۔",
+            ],
+            visualsMap: {
+                0: [{ src: "/assets/visuals/forex_broker_bridge_visual.webp", labelEn: "Broker as a Digital Bridge", labelUr: "بروکر ایک ڈیجیٹل پل کے طور پر" }],
+                1: [{ src: "/assets/visuals/forex_intro_global_market.webp", labelEn: "Global Market Access", labelUr: "عالمی مارکیٹ تک رسائی" }],
+                2: [{ src: "/assets/visuals/forex_execution_speed_visual.webp", labelEn: "Execution Speed & Spreads", labelUr: "آرڈر مکمل ہونے کی رفتار اور اسپریڈ" }],
+            }
+        },
+        {
             id: "basic-pairs",
             titleEn: "Basic of Pairs",
             titleUr: "جوڑوں کی بنیادی باتیں",
