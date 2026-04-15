@@ -371,6 +371,33 @@ export function Course02Content() {
                     }
                 >
                     <div className="space-y-8 pt-2">
+                        {/* Summary of Questions */}
+                        <div className="bg-brand-primary/5 rounded-2xl p-5 md:p-6 border border-brand-primary/10 mb-8">
+                            <div className="flex flex-col gap-2 mb-6 pb-4 border-b border-brand-primary/10">
+                                <h3 className="text-lg lg:text-xl font-bold text-text-PRIMARY tracking-wide">
+                                    Section Overview
+                                </h3>
+                                <h3 className="text-xl lg:text-2xl font-urdu font-bold text-text-PRIMARY text-right" dir="rtl">
+                                    اس حصے کا جائزہ
+                                </h3>
+                            </div>
+                            <div className="space-y-4">
+                                {section.contentEn.map((itemEn, i) => (
+                                    <div
+                                        key={`summary-${i}`}
+                                        className="flex flex-col md:flex-row justify-between gap-3 md:gap-6 items-start md:items-center bg-bg-SURFACE/50 p-4 rounded-xl border border-border/10 hover:border-brand-primary/20 transition-colors"
+                                    >
+                                        <div className="text-text-SECONDARY text-base lg:text-lg font-medium flex-1">
+                                            {itemEn}
+                                        </div>
+                                        <div className="text-text-SECONDARY text-lg lg:text-2xl font-urdu flex-1 text-right w-full" dir="rtl">
+                                            {section.contentUr[i]}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
                         <ul className="flex flex-col">
                             {section.contentEn.map((itemEn, i) => {
                                 const itemUr = section.contentUr[i];
