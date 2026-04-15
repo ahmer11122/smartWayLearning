@@ -234,40 +234,6 @@ export function Course02Content() {
             ],
         },
         {
-            id: "sessions",
-            titleEn: "Sessions",
-            titleUr: "سیشنز",
-            contentEn: [
-                "1. How many sessions are there in forex?",
-                "2. Time to open and close in forex",
-                "3. What is the asian session called?",
-                "4. Which pair should be traded in the asian session?",
-            ],
-            contentUr: [
-                "۱۔ فاریکس میں کتنے سیشنز ہیں؟",
-                "۲۔ فاریکس میں کھلنے اور بند ہونے کا وقت",
-                "۳۔ ایشین سیشن کو کیا کہا جاتا ہے؟",
-                "۴۔ ایشین سیشن میں کون سے جوڑے ٹریڈ کرنے چاہیے؟",
-            ],
-        },
-        {
-            id: "trends",
-            titleEn: "Trends",
-            titleUr: "ٹرینڈز",
-            contentEn: [
-                "5. What is trend?",
-                "6. What are the types of trends?",
-                "7. When are trends?",
-                "8. What is the profit and loss of the trend?",
-            ],
-            contentUr: [
-                "۵۔ ٹرینڈ کیا ہے؟",
-                "۶۔ ٹرینڈز کی کتنی اقسام ہیں؟",
-                "۷۔ ٹرینڈز کب ہوتے ہیں؟",
-                "۸۔ ٹرینڈ میں منافع اور نقصان کیا ہے؟",
-            ],
-        },
-        {
             id: "lot-size",
             titleEn: "Lot Size",
             titleUr: "لاٹ سائز",
@@ -314,6 +280,40 @@ export function Course02Content() {
                 "۱۔ فاریکس چارٹ کیا ہے؟",
                 "۲۔ چارٹ کی کتنی اقسام ہیں؟",
                 "۳۔ کینڈل اسٹک چارٹ زیادہ اہم کیوں ہے؟",
+            ],
+        },
+        {
+            id: "trends",
+            titleEn: "Trends",
+            titleUr: "ٹرینڈز",
+            contentEn: [
+                "5. What is trend?",
+                "6. What are the types of trends?",
+                "7. When are trends?",
+                "8. What is the profit and loss of the trend?",
+            ],
+            contentUr: [
+                "۵۔ ٹرینڈ کیا ہے؟",
+                "۶۔ ٹرینڈز کی کتنی اقسام ہیں؟",
+                "۷۔ ٹرینڈز کب ہوتے ہیں؟",
+                "۸۔ ٹرینڈ میں منافع اور نقصان کیا ہے؟",
+            ],
+        },
+        {
+            id: "sessions",
+            titleEn: "Sessions",
+            titleUr: "سیشنز",
+            contentEn: [
+                "1. How many sessions are there in forex?",
+                "2. Time to open and close in forex",
+                "3. What is the asian session called?",
+                "4. Which pair should be traded in the asian session?",
+            ],
+            contentUr: [
+                "۱۔ فاریکس میں کتنے سیشنز ہیں؟",
+                "۲۔ فاریکس میں کھلنے اور بند ہونے کا وقت",
+                "۳۔ ایشین سیشن کو کیا کہا جاتا ہے؟",
+                "۴۔ ایشین سیشن میں کون سے جوڑے ٹریڈ کرنے چاہیے؟",
             ],
         },
         {
