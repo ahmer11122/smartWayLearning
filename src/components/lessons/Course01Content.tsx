@@ -248,7 +248,7 @@ export function Course01Content() {
                     key={section.id}
                     id={section.id}
                     question={
-                        <div className="flex flex-col gap-3 py-1">
+                        <span className="flex flex-col gap-3 py-1">
                             <span className="text-xl lg:text-2xl font-bold text-text-PRIMARY tracking-tight">
                                 {section.titleEn}
                             </span>
@@ -258,7 +258,7 @@ export function Course01Content() {
                             >
                                 {section.titleUr}
                             </span>
-                        </div>
+                        </span>
                     }
                 >
                     <div className="space-y-8 pt-2">

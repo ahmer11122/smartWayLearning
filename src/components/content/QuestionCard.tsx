@@ -57,7 +57,7 @@ export function QuestionCard({ id, question, children, defaultOpen = false }: Qu
                     "cursor-pointer"
                 )}
             >
-                <div className="w-full text-left">{question}</div>
+                <span className="block w-full text-left">{question}</span>
                 <motion.span
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={transition}

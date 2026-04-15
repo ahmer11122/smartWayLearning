@@ -12,6 +12,8 @@ interface TableAnswer {
     isTable: boolean;
     headers: string[];
     rows: string[][];
+    preText?: string;
+    postText?: string;
 }
 
 interface Section {
@@ -58,15 +60,15 @@ export function Course02Content() {
             contentEn: [
                 "1. What Is Forex?",
                 "2. When Did Forex Start?",
-                "3. What is the method of exchange in the modern era",
-                "4. When did Forex become connected with internet banking, and what benefits does it provide to people?",
+                "3. What is the method of exchange in the modern era?",
+                "4. When did Forex become connected with internet banking?",
                 "5. What is the difference between traditional business and Forex?",
             ],
             contentUr: [
                 "۱۔ فاریکس کیا ہے؟",
                 "۲۔ فاریکس کب شروع ہوئی؟",
                 "۳۔ جدید دور میں تبادلے کا طریقہ کار کیا ہے؟",
-                "۴۔ فوریکس انٹرنیٹ بینکنگ کے ساتھ کب منسلک ہوئی ؟ اور اس سے لوگوں کو کیا فائدہ ہوا",
+                "۴۔ فوریکس انٹرنیٹ بینکنگ کے ساتھ کب منسلک ہوئی؟",
                 "۵۔ روایتی کاروبار اور فوریکس میں کیا فرق ہے؟",
             ],
             answersUr: [
@@ -195,16 +197,16 @@ export function Course02Content() {
             titleEn: "Basic of Pairs",
             titleUr: "جوڑوں کی بنیادی باتیں",
             contentEn: [
-                "1. What is Currencies? (famous examples)",
-                "2. What is Commodities? (Famous Examples)",
-                "3. What is Indices? (Famous Examples)",
-                "4. What is cryptocurrency? (famous examples)",
+                "1. What are Currencies?",
+                "2. What are Commodities?",
+                "3. What are Indices?",
+                "4. What is Cryptocurrency?",
             ],
             contentUr: [
-                "۱۔ کرنسیاں کیا ہیں؟ (مشہور مثالیں)",
-                "۲۔ دھاتیں کیا ہیں؟ (مشہور مثالیں)",
-                "۳۔ انڈیکس کیا ہے؟ (مشہور مثالیں)",
-                "۴۔ کرپٹوکرنسی کیا ہیں؟ (مشہور مثالیں)",
+                "۱۔ کرنسیاں کیا ہیں؟",
+                "۲۔ دھاتیں (Commodities) کیا ہیں؟",
+                "۳۔ انڈیکس (Indices) کیا ہے؟",
+                "۴۔ کرپٹوکرنسی کیا ہے؟",
             ],
             answersUr: [
                 "کرنسیاں اصل میں ممالک کے پیسے ہوتے ہیں، بس ڈیجیٹل یا کاغذی شکل میں۔ ہر ملک اپنی کرنسی چلاتا ہے، جیسے پاکستان میں روپے، امریکا میں ڈالر۔\n\nفوریکس میں ہم ان کرنسیوں کو آپس میں trade کرتے ہیں، یعنی ایک کرنسی خریدتے ہیں اور دوسری بیچتے ہیں۔\n\nفوریکس کی مشہور کرنسیاں:\n\nیہ وہ کرنسیاں ہیں جو سب سے زیادہ استعمال ہوتی ہیں:\n\nUSD (امریکی ڈالر)\nEUR (یورو)\nGBP (برطانوی پاؤنڈ)\nJPY (جاپانی ین)\nCHF (سوئس فرانک)\nAUD (آسٹریلین ڈالر)\nCAD (کینیڈین ڈالر)\nNZD (نیوزی لینڈ ڈالر)",
@@ -218,9 +220,9 @@ export function Course02Content() {
             titleEn: "Basic of Spread & Pips",
             titleUr: "اسپریڈ اور پپس کی بنیادی باتیں",
             contentEn: [
-                "1. How to make money in forex?",
+                "1. How to make money in Forex?",
                 "2. What is Long and Short?",
-                "3. What is Pips and Spread?",
+                "3. What are Pips and Spread?",
             ],
             contentUr: [
                 "۱۔ فاریکس میں پیسہ کیسے کمایا جاتا ہے؟",
@@ -239,15 +241,33 @@ export function Course02Content() {
             titleUr: "لاٹ سائز",
             contentEn: [
                 "1. What is Lot size?",
-                "2. How many types of lot sizes?",
-                "3. What is the lot sizing Schedule on account balance?",
-                "4. What is an Order?",
+                "2. What are the types of lot sizes?",
+                "3. What is the lot sizing schedule for account balances?",
             ],
             contentUr: [
                 "۱۔ لاٹ سائز کیا ہے؟",
                 "۲۔ لاٹ سائز کی کتنی اقسام ہیں؟",
                 "۳۔ اکاؤنٹ بیلنس کے مطابق لاٹ سائز",
-                "۴۔ آرڈر کیا ہے؟",
+            ],
+            answersUr: [
+                "لاٹ سائز فاریکس میں اس مقدار کو کہتے ہیں جس میں آپ ٹریڈ کرتے ہو، یعنی آپ کتنی بڑی trade لگا رہے ہو۔\n\nآسان الفاظ:\n\nلاٹ سائز = آپ کی trade کا “size” (کتنا پیسہ market میں لگا رہے ہو)",
+                "لاٹ سائز کی 3 main اقسام ہوتی ہیں\n\n1. Standard Lot\nسائز: 1.00\nبڑی trade\nprofit اور loss دونوں زیادہ\n\n2. Mini Lot\nسائز: 0.10\nدرمیانی trade\nrisk بھی درمیانہ\n\n3. Micro Lot\nسائز: 0.01\nچھوٹی trade\nbeginners کے لیے بہتر\n\nخلاصہ:\nبڑا lot = زیادہ risk + زیادہ profit\nچھوٹا lot = کم risk + کم profit",
+                {
+                    isTable: true,
+                    headers: ["اکاؤنٹ بیلنس (USD)", "لاٹ سائز"],
+                    rows: [
+                        ["100", "0.01"],
+                        ["200", "0.02"],
+                        ["300", "0.03"],
+                        ["400", "0.04"],
+                        ["500", "0.05"],
+                        ["600", "0.06"],
+                        ["700", "0.07"],
+                        ["800", "0.08"],
+                        ["900", "0.09"],
+                        ["1000", "0.10"],
+                    ]
+                }
             ],
         },
         {
@@ -255,17 +275,26 @@ export function Course02Content() {
             titleEn: "Market Orders",
             titleUr: "مارکیٹ آرڈرز",
             contentEn: [
-                "5. How many types of Orders?",
-                "6. What is Market Order?",
-                "7. What is Limit Order?",
-                "8. What is Stop Order?",
+                "1. What is an Order?",
+                "2. How many types of Orders?",
+                "3. What is Market Order?",
+                "4. What is Limit Order?",
+                "5. What is Stop Order?",
             ],
             contentUr: [
-                "۵۔ آرڈرز کی کتنی اقسام ہیں؟",
-                "۶۔ مارکیٹ آرڈر کیا ہے؟",
-                "۷۔ لمٹ آرڈر کیا ہے؟",
-                "۸۔ اسٹاپ آرڈر کیا ہے؟",
+                "۱۔ آرڈر کیا ہے؟",
+                "۲۔ آرڈرز کی کتنی اقسام ہیں؟",
+                "۳۔ مارکیٹ آرڈر کیا ہے؟",
+                "۴۔ لمٹ آرڈر کیا ہے؟",
+                "۵۔ اسٹاپ آرڈر کیا ہے؟",
             ],
+            answersUr: [
+                "فاریکس میں آرڈر وہ instruction ہوتی ہے جو آپ broker کو دیتے ہو کہ trade open یا close کرے۔\n\nآسان الفاظ:\n\nآرڈر = “buy یا sell کرنے کا حکم”",
+                "آرڈرز کی بنیادی طور پر 3 اقسام ہوتی ہیں:\n\n1. Market Order\nفوراً trade open ہو جاتی ہے\nموجودہ price پر buy یا sell\n\n2. Limit Order\nبہتر price کا انتظار\nBuy کم price پر / Sell زیادہ price پر\n\n3. Stop Order\nجب price کسی level کو cross کرے تو trade لگتی ہے\nbreakout کے لیے استعمال ہوتا ہے",
+                "مارکیٹ آرڈر وہ ہوتا ہے جس میں آپ فوراً trade open یا close کرتے ہو، موجودہ market price پر۔\n\nآسان الفاظ:\n\nمارکیٹ آرڈر = “ابھی فوراً خرید یا فروخت کرو”\n\nمثال:\nآپ نے Buy دبایا → trade فوراً چل گئی\nآپ نے Sell دبایا → trade فوراً چل گئی",
+                "Limit Order وہ ہوتا ہے جس میں آپ trade فوراً نہیں لگاتے بلکہ ایک خاص price set کرتے ہو اور market وہاں آئے تو trade خود لگ جاتی ہے۔\n\nآسان الفاظ:\n\nLimit Order = “میں ابھی نہیں کروں گا، جب price میرے level پر آئے گی تب trade لگے گی”\n\nاقسام:\nBuy Limit → کم price پر buy کرنا\nSell Limit → زیادہ price پر sell کرنا\n\nمثال:\nEUR/USD ابھی 1.1000 پر ہے\nآپ نے Buy Limit لگایا 1.0950 پر\nجب price 1.0950 آئے گی → trade خود buy ہو جائے گی",
+                "Stop Order وہ ہوتا ہے جس میں آپ trade پہلے سے set کرتے ہو، لیکن وہ تب ہی activate ہوتی ہے جب price ایک خاص level کو cross کرے۔\n\nآسان الفاظ:\n\nStop Order = “جب price یہاں تک پہنچے، تب میری trade چلا دینا”\n\nاقسام:\nBuy Stop → جب price اوپر جائے تو buy کرنا\nSell Stop → جب price نیچے جائے تو sell کرنا\n\nمثال:\nEUR/USD ابھی 1.1000 پر ہے\nآپ نے Buy Stop لگایا 1.1050 پر\nجب price 1.1050 کو cross کرے گی → buy trade لگ جائے گی"
+            ]
         },
         {
             id: "chart",
@@ -281,22 +310,33 @@ export function Course02Content() {
                 "۲۔ چارٹ کی کتنی اقسام ہیں؟",
                 "۳۔ کینڈل اسٹک چارٹ زیادہ اہم کیوں ہے؟",
             ],
+            answersUr: [
+                "فاریکس چارٹ وہ گراف ہوتا ہے جو کرنسی pair کی قیمت کی movement دکھاتا ہے۔\n\nآسان الفاظ:\n\nچارٹ = price اوپر نیچے جانے کی تصویر\n\nچارٹ سے کیا پتا چلتا ہے؟\nPrice کہاں جا رہی ہے\nپہلے کہاں گئی تھی\nTrend اوپر ہے یا نیچے",
+                "چارٹ کی 3 بنیادی اقسام ہیں:\nLine Chart\nBar Chart\nCandlestick Chart",
+                "کیونکہ یہ دوسرے charts کے مقابلے میں زیادہ معلومات دیتا ہے۔\n\nاس سے پتا چلتا ہے:\nPrice کہاں open ہوئی\nکہاں close ہوئی\nکتنی اوپر گئی\nکتنی نیچے گئی\n\nفائدہ:\nMarket کا trend سمجھنا آسان ہوتا ہے\nBuyers اور sellers کی طاقت نظر آتی ہے\nEntry اور exit بہتر plan ہوتی ہے"
+            ],
         },
         {
             id: "trends",
             titleEn: "Trends",
             titleUr: "ٹرینڈز",
             contentEn: [
-                "5. What is trend?",
-                "6. What are the types of trends?",
-                "7. When are trends?",
-                "8. What is the profit and loss of the trend?",
+                "1. What is trend?",
+                "2. What are the types of trends?",
+                "3. When are trends?",
+                "4. What is the profit and loss of the trend?",
             ],
             contentUr: [
-                "۵۔ ٹرینڈ کیا ہے؟",
-                "۶۔ ٹرینڈز کی کتنی اقسام ہیں؟",
-                "۷۔ ٹرینڈز کب ہوتے ہیں؟",
-                "۸۔ ٹرینڈ میں منافع اور نقصان کیا ہے؟",
+                "۱۔ ٹرینڈ کیا ہے؟",
+                "۲۔ ٹرینڈز کی کتنی اقسام ہیں؟",
+                "۳۔ ٹرینڈز کب ہوتے ہیں؟",
+                "۴۔ ٹرینڈ میں منافع اور نقصان کیا ہے؟",
+            ],
+            answersUr: [
+                "ٹرینڈ سے مراد market کی مجموعی direction ہوتی ہے، یعنی price زیادہ تر کس طرف جا رہی ہے۔\n\nآسان الفاظ:\n\nٹرینڈ = market کا رخ",
+                "ٹرینڈز کی 3 اقسام ہیں:\nاپ ٹرینڈ (Uptrend)\nڈاؤن ٹرینڈ (Downtrend)\nسائیڈ ویز ٹرینڈ (Sideways Trend)",
+                "ٹرینڈ اس وقت بنتا ہے جب market مسلسل ایک ہی direction میں move کرے۔\n\nمثال:\nاگر price بار بار اوپر higher highs اور higher lows بنائے → Uptrend\nاگر price بار بار نیچے lower highs اور lower lows بنائے → Downtrend\nاگر price نہ واضح اوپر جائے نہ نیچے → Sideways",
+                "اگر آپ ٹرینڈ کی direction میں trade کریں تو منافع کے chances بڑھ جاتے ہیں،\nاور اگر ٹرینڈ کے خلاف trade کریں تو نقصان کے chances بڑھ جاتے ہیں۔\n\nآسان الفاظ:\nTrend کے ساتھ trade = آسان اور محفوظ trade\nTrend کے خلاف trade = زیادہ risk\n\nمثال:\nMarket uptrend میں ہے اور آپ buy کرتے ہو → profit کا chance بہتر\nMarket uptrend میں ہے اور آپ sell کرتے ہو → loss का chance زیادہ"
             ],
         },
         {
@@ -304,10 +344,10 @@ export function Course02Content() {
             titleEn: "Sessions",
             titleUr: "سیشنز",
             contentEn: [
-                "1. How many sessions are there in forex?",
-                "2. Time to open and close in forex",
-                "3. What is the asian session called?",
-                "4. Which pair should be traded in the asian session?",
+                "1. How many sessions are there in Forex?",
+                "2. When are the market opening and closing times?",
+                "3. What is the Asian session called?",
+                "4. Which pairs should be traded in the Asian session?",
             ],
             contentUr: [
                 "۱۔ فاریکس میں کتنے سیشنز ہیں؟",
@@ -315,38 +355,63 @@ export function Course02Content() {
                 "۳۔ ایشین سیشن کو کیا کہا جاتا ہے؟",
                 "۴۔ ایشین سیشن میں کون سے جوڑے ٹریڈ کرنے چاہیے؟",
             ],
+            answersUr: [
+                "فاریکس میں 4 بڑے سیشنز ہوتے ہیں:\n\n1. Sydney Session\n2. Tokyo Session\n3. London Session\n4. New York Session",
+                {
+                    isTable: true,
+                    preText: "فاریکس میں کھلنے اور بند ہونے کا وقت (پاکستان ٹائم کے مطابق)\n\nنوٹ: سیشن کے اوقات سال میں کبھی کبھی Daylight Saving کی وجہ سے 1 گھنٹہ اوپر نیچے ہو سکتے ہیں۔ نیچے دیے گئے اوقات موجودہ 2026 conversion کے مطابق ہیں۔",
+                    headers: ["سیشن", "کھلنے کا وقت (PKT)", "بند ہونے کا وقت (PKT)"],
+                    rows: [
+                        ["سڈنی سیشن", "3:00 صبح", "12:00 دوپہر"],
+                        ["ٹوکیو سیشن", "4:00 صبح", "1:00 دوپہر"],
+                        ["لندن سیشن", "1:00 دوپہر", "9:00 رات"],
+                        ["نیویارک سیشن", "6:00 شام", "3:00 صبح"],
+                    ],
+                    postText: "اہم بات:\nسب سے زیادہ movement: لندن + نیویارک overlap\nپاکستان ٹائم: 5:00 شام سے 9:00 رات\nیہی وقت اکثر traders شکار کرتے ہیں، کیونکہ volatility زیادہ ہوتی ہے"
+                },
+                "ایشین سیشن کو عام طور پر ٹوکیو سیشن کہا جاتا ہے۔\n\nکیوں؟\n\nکیونکہ ایشیا میں سب سے بڑی فاریکس مارکیٹ ٹوکیو ہے،\nاس لیے پورے ایشین سیشن کو اسی کے نام سے پکارا جاتا ہے۔",
+                "ایشین (ٹوکیو) سیشن میں مارکیٹ عموماً slow اور range-bound ہوتی ہے، یعنی بڑے “jumps” کم ہوتے ہیں۔\n\nاس سیشن میں بہتر جوڑے:\n\n1. JPY والے pairs (سب سے active)\nUSD/JPY\nEUR/JPY\nGBP/JPY\nAUD/JPY\n\n2. AUD / NZD والے pairs\nAUD/USD\nNZD/USD\nAUD/JPY\nNZD/JPY\n\nکیوں یہ pairs؟\nکیونکہ یہ currencies ایشین economy سے directly related ہیں\nاس وقت انہی میں liquidity زیادہ ہوتی ہے"
+            ]
         },
         {
             id: "analysis",
             titleEn: "Analysis",
             titleUr: "تجزیہ",
             contentEn: [
-                "4. What is Analysis?",
-                "5. How many types of Analysis?",
-                "6. What is Fundamental Analysis?",
-                "7. What is Technical Analysis?",
+                "1. What is Analysis?",
+                "2. How many types of Analysis?",
+                "3. What is Fundamental Analysis?",
+                "4. What is Technical Analysis?",
             ],
             contentUr: [
-                "۴۔ تجزیہ کیا ہے؟",
-                "۵۔ تجزیہ کی کتنی اقسام ہیں؟",
-                "۶۔ فنڈامنٹل تجزیہ کیا ہے؟",
-                "۷۔ ٹیکنیکل تجزیہ کیا ہے؟",
+                "۱۔ تجزیہ کیا ہے؟",
+                "۲۔ تجزیہ کی کتنی اقسام ہیں؟",
+                "۳۔ فنڈامنٹل تجزیہ کیا ہے؟",
+                "۴۔ ٹیکنیکل تجزیہ کیا ہے؟",
             ],
+            answersUr: [
+                "تجزیہ کا مطلب ہے کسی چیز کو غور سے دیکھ کر سمجھنا اور اس کے بارے میں فیصلہ کرنا۔\n\nآسان الفاظ:\n\nتجزیہ = data یا situation کو سمجھ کر نتیجہ نکالنا\n\nفاریکس میں:\nچارٹ دیکھنا\ntrend سمجھنا\nprice کہاں جا سکتی ہے اندازہ لگانا\n\nمثال:\nآپ EUR/USD کا چارٹ دیکھ کر سوچتے ہو:\nقیمت اوپر جائے گی یا نیچے؟\nیہی تجزیہ ہے۔",
+                "تجزیہ کی 2 بنیادی اقسام ہیں (فاریکس میں):\n\n1. تکنیکی تجزیہ (Technical Analysis)\n2. بنیادی تجزیہ (Fundamental Analysis)",
+                "فنڈامنٹل تجزیہ وہ طریقہ ہے جس میں آپ معیشت (economy)، خبروں اور ملک کے حالات دیکھ کر فیصلہ کرتے ہو کہ کرنسی اوپر جائے گی یا نیچے۔\n\nآسان الفاظ:\n\nفنڈامنٹل تجزیہ = news اور economy دیکھ کر trade کرنا\n\nکیا چیزیں دیکھتے ہیں؟\nInterest rate (سود کی شرح)\nInflation (مہنگائی)\nGDP (ملکی ترقی)\nEmployment data (نوکریوں کے اعداد و شمار)\nImportant news events\n\nمثال:\nاگر امریکہ کی economy strong ہو → USD مضبوط ہو سکتا ہے\nاگر economy weak ہو → USD کمزور ہو سکتا ہے",
+                "ٹیکنیکل تجزیہ وہ طریقہ ہے جس میں آپ صرف چارٹ اور price movement دیکھ کر فیصلہ کرتے ہو کہ مارکیٹ اوپر جائے گی یا نیچے۔\n\nآسان الفاظ:\n\nٹیکنیکل تجزیہ = چارٹ دیکھ کر trade کرنا\n\nکیا چیزیں دیکھتے ہیں؟\nCandlestick patterns\nTrend (اوپر، نیچے یا سائیڈ ویز)\nSupport اور Resistance\nIndicators (RSI, Moving Average وغیرہ)\n\nمثال:\nاگر چارٹ میں price بار بار ایک level سے اوپر نہیں جا رہی → آپ سمجھتے ہو resistance ہے اور فیصلہ لیتے ہو"
+            ]
         },
         {
             id: "benefits",
             titleEn: "Benefits of Forex",
             titleUr: "فاریکس کے فوائد",
             contentEn: [
-                "8. Benefits of Forex",
-                "9. Benefits of Beginner trading",
-                "10. Open Real trading account and Earn",
+                "1. Benefits of Forex",
+                "2. Benefits of Beginner trading",
             ],
             contentUr: [
-                "۸۔ فاریکس کے فوائد",
-                "۹۔ ابتدائی ٹریڈنگ کے فوائد",
-                "۱۰۔ حقیقی ٹریڈنگ اکاؤنٹ کھولیں اور کمائیں",
+                "۱۔ فاریکس کے فوائد",
+                "۲۔ ابتدائی ٹریڈنگ کے فوائد",
             ],
+            answersUr: [
+                "فاریکس مارکیٹ کے چند بڑے فوائد درج ذیل ہیں:\n\n1. ۲۳/۵ مارکیٹ کھلی رہتی ہے، جب چاہو trade کر سکتے ہو\n2. گھر بیٹھے صرف موبائل یا لیپ ٹاپ سے کام ہو جاتا ہے\n3. کم پیسے سے بھی start کیا جا سکتا ہے\n4. Buy اور Sell دونوں طرف profit کمانے کا موقع ہوتا ہے\n5. دنیا کی سب سے بڑی financial مارکیٹ ہے، اس میں liquidity زیادہ ہوتی ہے",
+                "شروعات میں ٹریڈنگ کے فوائد:\n\n1. کم پیسے سے شروع کیا جا سکتا ہے\n2. مارکیٹ کو سمجھنے کا موقع ملتا ہے\n3. practice سے experience بنتا ہے\n4. risk کم رکھنے کا طریقہ سیکھتے ہو\n5. آہستہ آہستہ confidence بڑھتا ہے"
+            ]
         },
     ];
 
@@ -357,7 +422,7 @@ export function Course02Content() {
                     key={section.id}
                     id={section.id}
                     question={
-                        <div className="flex flex-col gap-3 py-1">
+                        <span className="flex flex-col gap-3 py-1">
                             <span className="text-xl lg:text-2xl font-bold text-text-PRIMARY tracking-tight">
                                 {section.titleEn}
                             </span>
@@ -367,7 +432,7 @@ export function Course02Content() {
                             >
                                 {section.titleUr}
                             </span>
-                        </div>
+                        </span>
                     }
                 >
                     <div className="space-y-8 pt-2">
@@ -443,6 +508,13 @@ export function Course02Content() {
                                             >
                                                 {typeof answer === 'object' && answer.isTable ? (
                                                     <div className="w-full space-y-6">
+                                                        {answer.preText && (
+                                                            <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide mb-6">
+                                                                {answer.preText.split('\n').map((line, idx) => (
+                                                                    <div key={idx}>{line}</div>
+                                                                ))}
+                                                            </div>
+                                                        )}
                                                         {/* Desktop View: Maintained exactly as requested */}
                                                         <div className="hidden lg:block overflow-x-auto rounded-xl border border-border/30 bg-bg-SURFACE/50">
                                                             <table className="w-full text-right border-collapse min-w-[800px]">
@@ -528,6 +600,13 @@ export function Course02Content() {
                                                                 </div>
                                                             ))}
                                                         </div>
+                                                        {answer.postText && (
+                                                            <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide mt-8 border-t border-border/10 pt-6">
+                                                                {answer.postText.split('\n').map((line, idx) => (
+                                                                    <div key={idx}>{line}</div>
+                                                                ))}
+                                                            </div>
+                                                        )}
                                                     </div>
                                                 ) : (
                                                     <div className="text-text-SECONDARY/70 text-xl lg:text-3xl leading-[2.4] font-urdu tracking-wide space-y-4">
