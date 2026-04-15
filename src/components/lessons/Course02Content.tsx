@@ -227,6 +227,11 @@ export function Course02Content() {
                 "۲۔ لانگ اور شارٹ کیا ہے؟",
                 "۳۔ پپ اور اسپریڈ کیا ہے؟",
             ],
+            answersUr: [
+                "فاریکس میں پیسہ کرنسی کی قیمت کے فرق (price difference) سے کمایا جاتا ہے۔\nآپ کوئی کرنسی دیکھتے ہو (مثلاً EUR/USD)\nاگر آپ سمجھو قیمت اوپر جائے گی → آپ Buy کرتے ہو\nجب قیمت اوپر چلی جائے → آپ trade close کرتے ہو → profit\nاگر آپ سمجھو قیمت نیچے جائے گی → آپ Sell کرتے ہو\nجب قیمت نیچے آ جائے → آپ trade close کرتے ہو → profit",
+                "لانگ (Long) اور شارٹ (Short) فاریکس کے دو basic طریقے ہیں trade کرنے کے۔\n\nلانگ (Long)\nمطلب: خریدنا (Buy کرنا)\nجب آپ کو لگے price اوپر جائے گی\n\nشارٹ (Short)\nمطلب: بیچنا (Sell کرنا)\nجب آپ کو لگے price نیچے جائے گی",
+                "Pip کیا ہے؟\n\nPip فاریکس میں price change کا سب سے چھوٹا یونٹ ہوتا ہے۔\n\nPip Value: 0.01\nمثال: Gold (XAUUSD) 2000.00 سے 2000.01 ہو جائے → 1 Pip change\n\nSpread کیا ہے؟\n\nSpread وہ فرق (difference) ہوتا ہے جو:\n\nBuy price (Ask)\nSell price (Bid)\n\nکے درمیان ہوتا ہے۔\n\nآسان مثال:\nBuy price = 2000.02\nSell price = 2000.00\nSpread = 2 pips",
+            ],
         },
         {
             id: "sessions",
