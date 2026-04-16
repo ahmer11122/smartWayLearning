@@ -243,11 +243,17 @@ export function Course02Content() {
                 "1. What is Lot size?",
                 "2. What are the types of lot sizes?",
                 "3. What is the lot sizing schedule for account balances?",
+                "4. What is TP (Take Profit)?",
+                "5. What is SL (Stop Loss)?",
+                "6. What is Break Even?",
             ],
             contentUr: [
                 "۱۔ لاٹ سائز کیا ہے؟",
                 "۲۔ لاٹ سائز کی کتنی اقسام ہیں؟",
                 "۳۔ اکاؤنٹ بیلنس کے مطابق لاٹ سائز",
+                "۴۔ ٹی پی (TP) کیا ہے؟",
+                "۵۔ ایس ایل (SL) کیا ہے؟",
+                "۶۔ بریک ایون (Break Even) کیا ہے؟",
             ],
             answersUr: [
                 "لاٹ سائز فاریکس میں اس مقدار کو کہتے ہیں جس میں آپ ٹریڈ کرتے ہو، یعنی آپ کتنی بڑی trade لگا رہے ہو۔\n\nآسان الفاظ:\n\nلاٹ سائز = آپ کی trade کا “size” (کتنا پیسہ market میں لگا رہے ہو)",
@@ -267,7 +273,10 @@ export function Course02Content() {
                         ["900", "0.09"],
                         ["1000", "0.10"],
                     ]
-                }
+                },
+                "TP یعنی Take Profit\nیہ وہ لیول ہوتا ہے جہاں آپ چاہتے ہیں کہ trade خود بند ہو جائے اور آپ کا منافع محفوظ ہو جائے۔\n\nآسان الفاظ:\nجہاں profit لینا ہو، وہاں TP لگاتے ہیں۔",
+                "SL یعنی Stop Loss\nیہ وہ لیول ہوتا ہے جہاں trade خود بند ہو جاتی ہے تاکہ نقصان ایک حد سے زیادہ نہ بڑھے۔\n\nآسان الفاظ:\nجہاں loss روکنا ہو، وہاں SL لگاتے ہیں۔",
+                "Break Even وہ point ہوتا ہے جہاں نہ profit ہو نہ loss۔\n\nآسان الفاظ:\nجب trade کو entry price پر یا cost cover کر کے close کریں"
             ],
         },
         {
@@ -323,7 +332,7 @@ export function Course02Content() {
             contentEn: [
                 "1. What is trend?",
                 "2. What are the types of trends?",
-                "3. When are trends?",
+                "3. When do trends occur?",
                 "4. What is the profit and loss of the trend?",
             ],
             contentUr: [
@@ -335,7 +344,7 @@ export function Course02Content() {
             answersUr: [
                 "ٹرینڈ سے مراد market کی مجموعی direction ہوتی ہے، یعنی price زیادہ تر کس طرف جا رہی ہے۔\n\nآسان الفاظ:\n\nٹرینڈ = market کا رخ",
                 "ٹرینڈز کی 3 اقسام ہیں:\nاپ ٹرینڈ (Uptrend)\nڈاؤن ٹرینڈ (Downtrend)\nسائیڈ ویز ٹرینڈ (Sideways Trend)",
-                "ٹرینڈ اس وقت بنتا ہے جب market مسلسل ایک ہی direction میں move کرے۔\n\nمثال:\nاگر price بار بار اوپر higher highs اور higher lows بنائے → Uptrend\nاگر price بار بار نیچے lower highs اور lower lows بنائے → Downtrend\nاگر price نہ واضح اوپر جائے نہ نیچے → Sideways",
+                "ٹرینڈ زیادہ تر نیویارک سیشن میں بنتے ہیں۔\n\nٹرینڈ اس وقت بنتا ہے جب market مسلسل ایک ہی direction میں move کرے۔\n\nمثال:\nاگر price بار بار اوپر higher highs اور higher lows بنائے → Uptrend\nاگر price بار بار نیچے lower highs اور lower lows بنائے → Downtrend\nاگر price نہ واضح اوپر جائے نہ نیچے → Sideways",
                 "اگر آپ ٹرینڈ کی direction میں trade کریں تو منافع کے chances بڑھ جاتے ہیں،\nاور اگر ٹرینڈ کے خلاف trade کریں تو نقصان کے chances بڑھ جاتے ہیں۔\n\nآسان الفاظ:\nTrend کے ساتھ trade = آسان اور محفوظ trade\nTrend کے خلاف trade = زیادہ risk\n\nمثال:\nMarket uptrend میں ہے اور آپ buy کرتے ہو → profit کا chance بہتر\nMarket uptrend میں ہے اور آپ sell کرتے ہو → loss का chance زیادہ"
             ],
         },
@@ -351,7 +360,7 @@ export function Course02Content() {
             ],
             contentUr: [
                 "۱۔ فاریکس میں کتنے سیشنز ہیں؟",
-                "۲۔ فاریکس میں کھلنے اور بند ہونے کا وقت",
+                "۲۔ مارکیٹ کے کھلنے اور بند ہونے کے اوقات کیا ہیں؟",
                 "۳۔ ایشین سیشن کو کیا کہا جاتا ہے؟",
                 "۴۔ ایشین سیشن میں کون سے جوڑے ٹریڈ کرنے چاہیے؟",
             ],
